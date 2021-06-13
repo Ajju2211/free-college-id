@@ -44,9 +44,10 @@
 }
 .collegePlateCardHeader {
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 2.2rem;
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
 .collegePlateCardBody {
     padding-top: 0px;
