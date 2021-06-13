@@ -14,6 +14,20 @@
     overflow-x: scroll;
     background: #212529;
 }
+.idphoto{
+    position: absolute;
+    top:1.2cm;
+    width: 2.1cm;
+    right: 0.4cm;
+}
+.photopass{
+    height: 2.85cm;
+    position: relative;
+    width: 2.1cm;
+}
+.signature{
+    height: 1.2cm;
+}
 @media only screen and (min-width: 879px) {
     .previewCont {
         align-items: center;
