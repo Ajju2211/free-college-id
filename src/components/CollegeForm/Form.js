@@ -3,6 +3,15 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import "./datePickerCustom.css"
 export default function Form() {
+    const [fullName, setFullName] = useState("");
+    const [fatherName, setFatherName] = useState("");
+    const [branch, setBranch] = useState("");
+    const [rollNumber, setRollNumber] = useState("")
+    const [duration, setDuration] = useState("");
+    const [dob, setDob] = useState("");
+    const [sapId, setSapId] = useState("")
+    const [bpNo, setBpNo] = useState("");
+
     return (
         <form>
             {/* FullName */}
@@ -26,8 +35,15 @@ export default function Form() {
                 {/* <div id="fullNameHelp" class="form-text">Enter your Full Name as per college records.</div> */}
             </div>
             {/* DOB */}
-            <Dob />
-            
+            <Dob dob={dob} setDob={(date)=>setDob(date)} />
+            <div className="mb-3">
+                <label for="duration" class="form-label">Duration</label>
+                <select class="form-select" aria-label="Default select example" id="duration">
+                    <option selected value="18- 22">18- 22</option>
+                    <option value="17 - 21">17 - 21</option>
+                    <option value="16 - 20">16 - 20</option>
+                </select>            
+            </div>
             <div class="mb-3">
                 <label for="fullName" class="form-label">FullName</label>
                 <input type="text" placeholder="Full Name" class="form-control" id="fullName" aria-describedby="fullNameHelp" />
@@ -60,10 +76,12 @@ const DropDown = () => {
         </div>
     )
 }
-const Dob = () => {
-    const [startDate, setStartDate] = useState(new Date());
+// selected={startDate}
+const Dob = ({dob, setDob}) => {
+    // const [startDate, setStartDate] = useState(new Date());
     return (
-        <DatePicker selected={startDate}
+        <DatePicker 
+            selected={dob}
             peekNextMonth
             showMonthDropdown
             showYearDropdown
@@ -75,7 +93,7 @@ const Dob = () => {
             onKeyDown={(e) => e.preventDefault()}
             className="dateInput col-12 form-control"
             minDate={new Date('01/01/1970')}
-            onChange={(date) => setStartDate(date)} />
+            onChange={(date) => setDob(date)} />
     );
 }
 
