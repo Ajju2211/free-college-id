@@ -9,7 +9,7 @@ const  Carousel =(props)=> {
             <div className="heading" style={{display:"flex",flexDirection:"column"}}>
             <h1 style={{textAlign:"center"}} >Get your college ID card for free</h1>
             <p style={{textAlign:"center"}}>Download within few seconds...!</p>
-            <button className="findbutton">Find your college</button>
+            <button className="findbutton"><a href="/#search">Find your college</a></button>
             </div>
         </div>
     )

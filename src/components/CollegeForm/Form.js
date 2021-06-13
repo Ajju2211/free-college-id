@@ -53,7 +53,7 @@ export default function Form() {
                 <div id="uploadImg" className="form-control d-flex justify-content-center" aria-describedby="uploadImgHelp">
                     <RiImageAddFill style={{fontSize: "4.5rem",border: "2px dotted #042a04fc",padding: "5px",borderRadius: "8px",background: "#eae1e8"}} />
                 </div>
-                <div id="uploadImgHelp" class="form-text">Upload passport photo with 1 x 1 edges.</div>
+                <div id="uploadImgHelp" class="form-text">Upload passport photo.</div>
             </div>
             <div class="mb-3">
                 <label for="sapId" class="form-label">SAP ID</label>

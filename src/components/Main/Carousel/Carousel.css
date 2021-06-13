@@ -51,6 +51,9 @@ animation: bigify 2s ease-in forwards;
     font-size: 1.3em;
     font-weight: 600;
     margin: 0 auto 0 auto;
+}
+.findbutton:hover{
+    
     box-shadow: -7px 7px 13px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: -7px 7px 13px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: -7px 7px 13px 0px rgba(0,0,0,0.75);

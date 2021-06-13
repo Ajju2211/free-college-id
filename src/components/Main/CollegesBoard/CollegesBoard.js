@@ -5,7 +5,7 @@ import styles from "./styles.module.css"
 
 export default function CollegesBoard() {
     return (
-        <div className="container mt-3">
+        <div className="container mt-3" id="search">
             <div className="row">
                 <div className={" " + styles.searchGrp}>
                     <div className={"input-group mb-3 " + styles.searchInputGrp}>
@@ -17,7 +17,7 @@ export default function CollegesBoard() {
             <div className="row" style={{ background: "#434343", padding: "20px", borderRadius: "30px" }}>
                 <div className="container">
                     <div className="row">
-                        <Card title="snist" url="/Images/snist-logo.jpg" />
+                        <Card title="snist" url="/Images/snistlogo.jpg" />
                         <Card title="cbit" url="/Images/cbit-logo.png" />
                         <Card title="jntu" url="/Images/jntuh-logo.jpg" />
                         <Card title="ou" url="/Images/ouceh-logo.jpg" />

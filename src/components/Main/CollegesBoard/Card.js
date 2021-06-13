@@ -11,6 +11,7 @@ export default function Card(props) {
                     </div>
                 </div>
             </div>
+            <div style={{position:"absolute",top:"10%"}}><p style={{textAlign:"center"}}>Coming Soon</p></div>
         </div>
     )
 }
