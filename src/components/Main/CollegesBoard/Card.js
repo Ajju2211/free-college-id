@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 import styles from './styles.module.css'
 // const showRibbon = (e) => {
 //     console.log(window.$(e.target).children());
@@ -19,7 +20,8 @@ export default function Card(props) {
                         <div className={styles.collegePlateImgFrame}>
                             <img src={props.url} className={"" + styles.collegePlateImg} />
                         </div>
-                        {ribbon ? <div className={styles.bottomribbon+" bottomRib"} ><h5>Generate</h5></div> : <></>}
+                        {ribbon ? <div className={styles.bottomribbon+" bottomRib"} >
+                        <h5>{props.available ?<Link className="stretched-link" style={{textDecoration:"none",color:"white"}} to={`/college/${props.id}`} >Generate</Link>:<span>Coming Soon</span>}</h5></div> : <></>}
                     </div>
                 </div>
             </div>

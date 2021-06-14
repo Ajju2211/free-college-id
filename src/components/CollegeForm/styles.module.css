@@ -13,7 +13,9 @@
     justify-content: center;
     /* width: 4rem; */
     border-radius: 10px;
+    cursor: pointer;
     /* margin-left: 1.1rem; */
+    position: relative;
 }
 .scale {
     transform: scale(1.5);
