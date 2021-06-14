@@ -62,7 +62,7 @@ export default function Form() {
             </div>
             <div class="mb-3">
                 <label for="bpNo" class="form-label">BP No</label>
-                <input type="text" placeholder="BP No" class="form-control" id="bpNo" aria-describedby="bpNoHelp" />
+                <input type="text" onChange={(e)=>setBpNo(e.target.value)} value={bpNo} placeholder="BP No" class="form-control" id="bpNo" aria-describedby="bpNoHelp" />
                 <div id="bpNoHelp" class="form-text">Enter your BP No given by your college.</div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
