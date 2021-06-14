@@ -4,9 +4,9 @@ import Previewcard from './Previewcard'
 export class Preview extends Component {
     render() {
         return (
-        <div style={{fontFamily: "'PT Sans', sans-serif"}}>
-        <Previewcard/>
-        </div>
+            <div style={{ fontFamily: "'PT Sans', sans-serif" }}>
+                <Previewcard />
+            </div>
         )
     }
 }
