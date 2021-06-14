@@ -6,67 +6,65 @@
             "id":"0",
             "imgUrl": "/Images/snistlogo.jpg",
             "available": true,
-            "courses": [
+            "branches": [
                 {
-                    "title": "BTech",
-                    "value": "btech",
-                    "duration": 4,
-                    "id": "1",
-                    "branches": [
-                        {
-                            "title": "CSE",
-                            "value": "cse",
-                            "id": "1"
-                        },
-                        {
-                            "title": "IT",
-                            "value": "it",
-                            "id": "2"
-                        },
-                        {
-                            "title": "ECE",
-                            "value": "ece",
-                            "id": "3"
-                        },
-                        {
-                            "title": "ECM",
-                            "value": "ecm",
-                            "id": "4"
-                        },
-                        {
-                            "title": "CIVIL",
-                            "value": "civ",
-                            "id": "5"
-                        },
-                        {
-                            "title": "EEE",
-                            "value": "eee",
-                            "id": "6"
-                        },
-                        {
-                            "title": "Bio.Tech",
-                            "value": "bt",
-                            "id": "7"
-                        }
-                    ]
+                    "title": "CSE",
+                    "value": "CSE",
+                    "id": "1"
                 },
                 {
-                    "title": "MTech",
-                    "value": "mtech",
+                    "title": "IT",
+                    "value": "IT",
+                    "id": "2"
+                },
+                {
+                    "title": "ECE",
+                    "value": "ECE",
+                    "id": "3"
+                },
+                {
+                    "title": "ECM",
+                    "value": "ECM",
+                    "id": "4"
+                },
+                {
+                    "title": "CIVIL",
+                    "value": "CIV",
+                    "id": "5"
+                },
+                {
+                    "title": "EEE",
+                    "value": "EEE",
+                    "id": "6"
+                },
+                {
+                    "title": "Bio.Tech",
+                    "value": "Bio.Tech",
+                    "id": "7"
+                },
+                {
+                    "title": "MBA",
+                    "value": "MBA",
+                    "id": "8"
+                },
+                {
+                    "title": "Science & Humanities",
+                    "value": "Sci.Humanities",
+                    "id": "9"
+                }
+            ],
+            "courses": [
+                {
+                    "title": "B.Tech",
+                    "value": "B.Tech",
+                    "duration": 4,
+                    "id": "1"
+                },
+                {
+                    "title": "M.Tech",
+                    "value": "M.Tech",
                     "duration": 2,
-                    "id": "2",
-                    "branches": [
-                        {
-                            "title": "MBA",
-                            "value": "mba",
-                            "id": "1"
-                        },
-                        {
-                            "title": "Science & Humanities",
-                            "value": "sh",
-                            "id": "2"
-                        }
-                    ]
+                    "id": "2"
                 }
             ]
         },
