@@ -30,7 +30,7 @@ export default function Previewcard() {
                 <div class={styles.idphoto} >
                     <img class={styles.photopass} src="/Images/Will.jpg"></img>
                     <img class={styles.signature} src="/Images/signPrincipal.jpg"></img>
-                    <div style={{ fontWeight: "bold",fontSize:"0.3cm" }}>PRINCIPAL</div>
+                    <div style={{ fontWeight: "bold",fontSize:"0.3cm"}}>PRINCIPAL</div>
                 </div>
             </div>
         </div>

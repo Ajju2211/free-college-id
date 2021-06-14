@@ -65,7 +65,10 @@ export default function Form() {
                 <input type="text" onChange={(e)=>setBpNo(e.target.value)} value={bpNo} placeholder="BP No" class="form-control" id="bpNo" aria-describedby="bpNoHelp" />
                 <div id="bpNoHelp" class="form-text">Enter your BP No given by your college.</div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" onClick={(e)=>{
+                e.preventDefault();
+                window.$('#downloadbtn').click();
+            }} class="down" style={{outline:"none",left:"0",right:"0",padding:"8px 15px 8px 15px",width:"fit-content",margin:"10px",borderRadius:"5px"}}>Generate</button>
         </form>
     )
 }

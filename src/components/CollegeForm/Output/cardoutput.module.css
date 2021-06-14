@@ -1,3 +1,9 @@
+
+.scale {
+    transform: scale(1.5);
+    animation-fill-mode: forwards;
+    top: 80px;
+}
 .lib{
     transform: rotate(-90deg);
     position:absolute;

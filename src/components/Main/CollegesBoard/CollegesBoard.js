@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { FaSearch } from 'react-icons/fa'
+import { FaCreativeCommonsNcJp, FaSearch } from 'react-icons/fa'
 import Card from "./Card";
 import styles from "./styles.module.css"
 import collegesData from "../../../data/colleges.json"
