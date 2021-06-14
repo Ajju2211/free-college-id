@@ -5,36 +5,19 @@ import { useReactToPrint } from 'react-to-print';
 import Preview from './Preview';
 import Back from './Output/Back';
 import Previewcard from './Previewcard';
-const downloadImage = () => {
-  window.scrollTo(0, 0);
-  window.html2canvas(window.document.querySelector("#printMe")).then(canvas => {
-    let a = window.document.createElement('a');
-    window.document.body.appendChild(a);
+// const downloadImage = () => {
+//   window.scrollTo(0, 0);
+//   window.html2canvas(window.document.querySelector("#printMe")).then(canvas => {
+//     let a = window.document.createElement('a');
+//     window.document.body.appendChild(a);
 
-    a.download = "test.png";
-    a.href = canvas.toDataURL();
-    a.click();
-  });
-}
+//     a.download = "test.png";
+//     a.href = canvas.toDataURL();
+//     a.click();
+//   });
+// }
 export default function FormBox() {
 
-  const pageStyle = `
-  @page {
-    size: landscape;
-  }
-
-  @media all {
-    .pagebreak {
-      display: none;
-    }
-  }
-
-  @media print {
-    .pagebreak {
-      page-break-before: always;
-    }
-  }
-`;
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current
@@ -55,7 +38,7 @@ export default function FormBox() {
             window.$('#printOutPut').show();
             handlePrint();
             window.$('#printOutPut').hide();
-          }} class="down" style={{outline:"none",left:"0",right:"0",padding:"8px 15px 8px 15px",width:"fit-content",margin:"10px",borderRadius:"5px"}}>Download</button>
+          }} class="down" id="downloadbtn" style={{outline:"none",left:"0",right:"0",padding:"8px 15px 8px 15px",width:"fit-content",margin:"10px",borderRadius:"5px"}}>Download</button>
          </div>
         <div className="container pt-3 pb-3 previewCont" style={{cursor:"move"}}>
           <div className="row justify-content-center" style={{flexDirection:"column", alignItems:"center"}}>

@@ -7,6 +7,9 @@ export default function Main() {
         <>
             <Carousel/>
             <CollegesBoard/>
+            <footer style={{bottom:"0"}}>
+                <p style={{textAlign:"center", background:"black"}}>Powered by MARS. All copy rights reserved.</p>
+            </footer>
         </>
     )
 }
