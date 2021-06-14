@@ -82,7 +82,7 @@ export default function FormBox(props) {
             />
             {/* <Back scale={true}/> */}
           </div>
-          <div className="row p-0 m-0 mb-3" style={{ width: "14.1cm", height: "7.8cm", position: "relative", alignItems: "center", justifyContent: "center" }}>
+          <div className="row p-0 m-0 mb-3" style={{ width: "14.1cm", height: "7.8cm", position: "relative", justifyContent: "center" }}>
 
             <Back  
               fullName={fullName}
