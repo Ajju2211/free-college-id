@@ -17,8 +17,18 @@
     justify-content:center;
     padding-top:3px;
     cursor: pointer;
+    animation: slideUp 0.1s ease-in-out;
 }
-
+@keyframes slideUp {
+    0% {
+    /* transform: translateY(2px); */
+    height: 0px;
+    }
+    100% {
+        /* transform: translateY(0); */
+        height: 50px;
+    }
+}
 .searchInput,
 .searchInputText
  {

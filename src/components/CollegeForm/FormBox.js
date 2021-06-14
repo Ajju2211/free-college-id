@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef} from 'react'
 import Form from './Form'
-import Preview from './Preview'
+import PrintOutput from './PrintOutput'
 import { useReactToPrint } from 'react-to-print';
+import Preview from './Preview';
 const downloadImage = () => {
   window.scrollTo(0, 0);
   window.html2canvas(window.document.querySelector("#printMe")).then(canvas => {
@@ -14,6 +15,7 @@ const downloadImage = () => {
   });
 }
 export default function FormBox() {
+
   const pageStyle = `
   @page {
     size: landscape;
@@ -47,9 +49,14 @@ export default function FormBox() {
       <div className="col-md-7 col-12 mt-2">
         <div className="container p-2 previewCont" >
           <h3 className="text-center text-white">Preview</h3>
-          <button className="btn btn-primary" onClick={handlePrint}>Download</button>
+          <button className="btn btn-primary" onClick={()=>{
+            window.$('#printOutPut').show();
+            handlePrint();
+            //window.$('#printOutPut').hide();
+          }}>Download</button>
+          <Preview/>
           <div id="printMe" className="row">
-            <Preview ref={componentRef} />
+            <PrintOutput ref={componentRef}  />
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
 .curve{
     transform: skewX(-45deg);
     position: absolute;
-    right: -25px;
-    top:0;
-    height:50px;
-    width:50px;
+    right: -5mm;
+    top: 0;
+    bottom: 0;
+    height:1cm;
+    width:1cm;
     background:orange;
 }
 .previewCont {
@@ -16,17 +17,17 @@
 }
 .idphoto{
     position: absolute;
-    top:1.2cm;
-    width: 2.1cm;
+    top:0.8cm;
+    width: 1.4cm;
     right: 0.4cm;
 }
 .photopass{
-    height: 2.85cm;
+    height: 1.9cm;
     position: relative;
-    width: 2.1cm;
+    width: 1.4cm;
 }
 .signature{
-    height: 1.2cm;
+    height: 0.8cm;
 }
 @media only screen and (min-width: 879px) {
     .previewCont {
