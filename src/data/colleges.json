@@ -1,0 +1,98 @@
+{
+    "data": [
+        {
+            "name": "Sreenidhi Institute of science And Technology",
+            "code": "snist",
+            "id":"0",
+            "imgUrl": "/Images/snistlogo.jpg",
+            "available": true,
+            "courses": [
+                {
+                    "title": "BTech",
+                    "value": "btech",
+                    "duration": 4,
+                    "id": "1",
+                    "branches": [
+                        {
+                            "title": "CSE",
+                            "value": "cse",
+                            "id": "1"
+                        },
+                        {
+                            "title": "IT",
+                            "value": "it",
+                            "id": "2"
+                        },
+                        {
+                            "title": "ECE",
+                            "value": "ece",
+                            "id": "3"
+                        },
+                        {
+                            "title": "ECM",
+                            "value": "ecm",
+                            "id": "4"
+                        },
+                        {
+                            "title": "CIVIL",
+                            "value": "civ",
+                            "id": "5"
+                        },
+                        {
+                            "title": "EEE",
+                            "value": "eee",
+                            "id": "6"
+                        },
+                        {
+                            "title": "Bio.Tech",
+                            "value": "bt",
+                            "id": "7"
+                        }
+                    ]
+                },
+                {
+                    "title": "MTech",
+                    "value": "mtech",
+                    "duration": 2,
+                    "id": "2",
+                    "branches": [
+                        {
+                            "title": "MBA",
+                            "value": "mba",
+                            "id": "1"
+                        },
+                        {
+                            "title": "Science & Humanities",
+                            "value": "sh",
+                            "id": "2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Chaitanya Bharatiya Institute Of Technology",
+            "code": "cbit",
+            "id":"1",
+            "imgUrl": "/Images/cbit-logo.png",
+            "available": false,
+            "courses": []
+        },
+        {
+            "name": "Jawaharlal Nehru Technological University Hyderabad",
+            "code": "jntuh",
+            "id":"2",
+            "imgUrl": "/Images/jntuh-logo.jpg",
+            "available": false,
+            "courses": []
+        },
+        {
+            "name": "Osmania University",
+            "code": "ou",
+            "id":"3",
+            "imgUrl": "/Images/ouceh-logo.jpg",
+            "available": false,
+            "courses": []
+        }
+    ]
+}
