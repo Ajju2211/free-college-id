@@ -4,11 +4,9 @@ import Back from './Output/Back'
 export class Preview extends Component {
     render() {
         return (
-            <div style={{ fontFamily: "'PT Sans', sans-serif" }}>
+            <div style={{ fontFamily: "'PT Sans', sans-serif", width:"fit-content" }}>
                 <Previewcard/>
-                <div className="backsidecard">
-                <Back/>
-                </div>
+                {/* <Back scale={true}/> */}
             </div>
         )
     }

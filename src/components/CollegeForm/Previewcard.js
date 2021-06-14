@@ -3,7 +3,7 @@ import './cardpreview.css'
 import Studentdetails from './Studentdetails'
 export default function Previewcard() {
     return (
-        <div className="card" id="printCard" style={{ height: "7.8cm", width: "12.6cm" }}>
+        <div className="card" id="printCard" style={{ height: "7.8cm", width: "12.6cm",padding:"0"}}>
             <div class="card-body p-0" style={{ border: "1px black solid", margin: "1px" }}>
                 <div className="row p-0" style={{ margin: "0.35cm 0 0 0" }}>
                     <div class="col-7" style={{ background: "orange", height: "50px" }}>
@@ -30,7 +30,7 @@ export default function Previewcard() {
                 <div class="idphoto" >
                     <img class="photopass" src="/Images/Will.jpg"></img>
                     <img class="signature" src="/Images/signPrincipal.jpg"></img>
-                    <div style={{ fontWeight: "bold" }}>PRINCIPAL</div>
+                    <div style={{ fontWeight: "bold",position:"absolute" }}>PRINCIPAL</div>
                 </div>
             </div>
         </div>

@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './cardoutput.module.css'
-export default function Previewcard() {
+export default function Back(props) {
+    const scale = props.scale ? styles.scale : "";
     return (
-        <div className="card" id="printCard" style={{height: "5.2cm", width: "8.4cm"}}>
+        <div className={"card "+scale} id="printCard" style={{height: "5.2cm", width: "8.4cm",padding:"0"}}>
             <div class="card-body p-0" style={{ border: "1px black solid", margin: "1px",position:"relative"}}>
              <div style={{fontSize:"0.3cm",padding:"0.3cm",color:"gray"}}><u>Instructions:</u></div>
              <div style={{fontSize:"0.22cm",paddingLeft:"0.5cm"}}>
