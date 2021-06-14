@@ -47,13 +47,13 @@ export default function FormBox() {
         </div>
       </div>
       <div className="col-md-7 col-12 mt-2">
-        <div className="container p-2 previewCont" >
+        <div className="container previewCont" >
           <h3 className="text-center text-white">Preview</h3>
-          <button className="btn btn-primary" onClick={()=>{
+          <button  onClick={()=>{
             window.$('#printOutPut').show();
             handlePrint();
-            //window.$('#printOutPut').hide();
-          }}>Download</button>
+            window.$('#printOutPut').hide();
+          }} class="down" style={{outline:"none",padding:"8px 15px 8px 15px",margin:"10px",borderRadius:"5px"}}>Download</button>
           <Preview/>
           <div id="printMe" className="row">
             <PrintOutput ref={componentRef}  />
