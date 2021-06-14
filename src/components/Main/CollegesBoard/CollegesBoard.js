@@ -17,6 +17,7 @@ export default function CollegesBoard() {
             <div className="row" style={{ background: "#434343", padding: "20px", borderRadius: "30px" }}>
                 <div className="container">
                     <div className="row">
+                        
                         <Card title="snist" url="/Images/snistlogo.jpg" />
                         <Card title="cbit" url="/Images/cbit-logo.png" />
                         <Card title="jntu" url="/Images/jntuh-logo.jpg" />
