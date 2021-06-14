@@ -4,7 +4,7 @@ export default function Studentdetails() {
     return (
         <div style={{ display: "flex", justifyContent: "flex-start", padding: "1mm", marginLeft: "0.2cm", flexDirection: "column", fontFamily: "sans-serif", fontSize: "0.27cm" }}>
             <div>
-                <div style={{ fontWeight: "bold", padding: "0.09cm 0" }}>SRIKAR RAMA OUTPUT</div>
+                <div style={{ fontWeight: "bold", padding: "0.11cm 0" }}>SRIKAR RAMA OUTPUT</div>
             </div>
             <div style={{ display: "flex" }}>
                 <div style={{ width: "2cm" }}>Father's Name </div>
