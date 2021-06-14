@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
-import {FaImage} from "react-icons/fa"
-import {RiImageAddFill, RiImageEditFill} from 'react-icons/ri'
+import { FaImage } from "react-icons/fa"
+import { RiImageAddFill, RiImageEditFill } from 'react-icons/ri'
 import "react-datepicker/dist/react-datepicker.css";
 import "./datePickerCustom.css"
 export default function Form() {
@@ -30,7 +30,7 @@ export default function Form() {
                 {/* <div id="fatherNameHelp" class="form-text">Enter your Full Name as per college records.</div> */}
             </div>
             {/* Course, Branch */}
-            <DropDown course={course} setCourse={(val)=>setCourse(val)} branch={branch} setBranch={(val)=>setBranch(val)} />
+            <DropDown course={course} setCourse={(val) => setCourse(val)} branch={branch} setBranch={(val) => setBranch(val)} />
             {/* Roll numbr */}
             <div class="mb-3">
                 <label for="rollNumber" class="form-label">Roll Number</label>
@@ -51,7 +51,7 @@ export default function Form() {
                 <label for="uploadImg" class="form-label">Upload Photo</label>
                 {/* <input type="text" placeholder="Upload Photo" class="form-control" id="uploadImg" aria-describedby="uploadImgHelp" /> */}
                 <div id="uploadImg" className="form-control d-flex justify-content-center" aria-describedby="uploadImgHelp">
-                    <RiImageAddFill style={{fontSize: "4.5rem",border: "2px dotted #042a04fc",padding: "5px",borderRadius: "8px",background: "#eae1e8"}} />
+                    <RiImageAddFill style={{ fontSize: "4.5rem", border: "2px dotted #042a04fc", padding: "5px", borderRadius: "8px", background: "#eae1e8" }} />
                 </div>
                 <div id="uploadImgHelp" class="form-text">Upload passport photo.</div>
             </div>
@@ -69,21 +69,21 @@ export default function Form() {
         </form>
     )
 }
-const DropDown = ({course, setCourse, branch, setBranch}) => {
+const DropDown = ({ course, setCourse, branch, setBranch }) => {
     return (
         <div className="mb-3 d-flex justify-content-between">
             <span className="col-5">
                 {/* <label for="course" class="form-label">Course</label>
             <input type="text" class="form-control" id="course"/> */}
                 <label for="course" class="form-label">Course</label>
-                <select class="form-select" id="course" value={course} onChange={(e)=>setCourse(e.target.value)}>
+                <select class="form-select" id="course" value={course} onChange={(e) => setCourse(e.target.value)}>
                     <option selected value="Btech">Btech</option>
                     <option value="Mtech">Btech</option>
                 </select>
             </span>
             <span className="col-5">
                 <label for="branch" class="form-label">Branch</label>
-                <select class="form-select" id="branch" value={branch} onChange={(e)=>setBranch(e.target.value)}>
+                <select class="form-select" id="branch" value={branch} onChange={(e) => setBranch(e.target.value)}>
                     <option selected value="CSE">CSE</option>
                     <option value="ECE">ECE</option>
                     <option value="MEC">MEC</option>
