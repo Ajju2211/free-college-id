@@ -58,14 +58,14 @@ export default function FormBox(props) {
             window.$('#printOutPut').show();
             handlePrint();
             window.$('#printOutPut').hide();
-          }} class="down" id="downloadbtn" style={{ outline: "none", left: "0", right: "0", padding: "8px 15px 8px 15px", width: "fit-content", margin: "10px", borderRadius: "5px" }}>Download</button>
-        </div>
-        <div className="container pt-3 pb-3 previewCont" style={{ cursor: "move" }}>
-          <div className="row justify-content-center" style={{ flexDirection: "column", alignItems: "center" }}>
-            {/* <Preview/> */}
-            <div id="printMe" className="row">
-              <PrintOutput ref={componentRef} />
-            </div>
+          }} class="down" id="downloadbtn" style={{outline:"none",left:"0",right:"0",padding:"8px 15px 8px 15px",width:"fit-content",margin:"10px",borderRadius:"5px",fontWeight:"bold"}}>Download</button>
+         </div>
+        <div className="container pt-3 pb-3 previewCont" style={{cursor:"move"}}>
+          <div className="row justify-content-center" style={{flexDirection:"column", alignItems:"center"}}>
+          {/* <Preview/> */}
+          <div id="printMe" className="row">
+            <PrintOutput ref={componentRef}  />
+          </div>
           </div>
           <div className="row p-0 m-0" style={{ width: "14.1cm", height: "7.8cm", position: "relative", alignItems: "center", justifyContent: "center" }}>
             <Previewcard
