@@ -16,7 +16,7 @@ export default function Main() {
                     <div class="github"><a  href="https://github.com/srikar-rama" style={{ textDecoration: 'none'}}>Srikar Rama</a></div>
                     <div class="github"><a  href="https://github.com/Ajju2211" style={{ textDecoration: 'none' }}>Mohammed Azharuddin</a></div>
                 </div>
-                <p class="powered" style={{ textAlign: "center", margin: "0", color: "white", height: "30px" }}>Powered by MARS. All copy rights reserved.</p>
+                <p class="powered" style={{ textAlign: "center", margin: "0", color: "white", height: "30px" }}>Powered by MARS. All copy rights reserved ( v.1 )</p>
             </div>
         </>
     )
