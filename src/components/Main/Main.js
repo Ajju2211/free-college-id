@@ -13,7 +13,7 @@ export default function Main() {
                 <div class="row" style={{color:"gray",display:"flex",alignItems:"center"}}>
                 <img src="/Images/githubimg.png" style={{ width: "auto", height: "30px" }}></img>Github profiles
                 </div>
-                    <div class="github"><a  href="https://github.com/srikar-rama" style={{ textDecoration: 'none'}}>Srikar Rama</a></div>
+                    <div class="github"><a  href="https://github.com/srikar-rama" style={{ textDecoration: 'none'}}>Rama Srikar</a></div>
                     <div class="github"><a  href="https://github.com/Ajju2211" style={{ textDecoration: 'none' }}>Mohammed Azharuddin</a></div>
                 </div>
                 <p class="powered" style={{ textAlign: "center", margin: "0", color: "white", height: "30px" }}>Powered by MARS. All copy rights reserved ( v.1 )</p>
