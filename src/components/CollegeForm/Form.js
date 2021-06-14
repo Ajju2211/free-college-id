@@ -65,10 +65,12 @@ export default function Form() {
                 <input type="text" placeholder="BP No" class="form-control" id="bpNo" aria-describedby="bpNoHelp" />
                 <div id="bpNoHelp" class="form-text">Enter your BP No given by your college.</div>
             </div>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
             <button type="submit" onClick={(e)=>{
                 e.preventDefault();
                 window.$('#downloadbtn').click();
-            }} class="down" style={{outline:"none",left:"0",right:"0",padding:"8px 15px 8px 15px",width:"fit-content",margin:"10px",borderRadius:"5px"}}>Generate</button>
+            }} class="down" style={{outline:"none",margin:"0 auto 0 auto",left:"0",right:"0",padding:"8px 15px 8px 15px",margin:"10px",borderRadius:"5px",fontWeight:"bold"}}>Generate</button>
+            </div>
         </form>
     )
 }
