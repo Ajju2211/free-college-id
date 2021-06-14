@@ -1,0 +1,14 @@
+.powered{
+    font-size:1em;
+}
+.love{
+    font-size: 1.1em;
+}
+@media screen and (max-width:550px){
+    .powered{
+        font-size: 0.9em;
+    }
+    .love{
+        font-size: 0.65em;
+    }
+}
