@@ -1,3 +1,19 @@
+.backsidecard{
+transform: scale(1.5);
+}
+.down{
+    background:white;
+    color: black;
+    border: 1px solid black
+}
+.down:hover{
+    box-shadow: -7px 7px 13px 0px rgba(102, 99, 99, 0.75);
+    -webkit-box-shadow: -7px 7px 13px 0px rgba(102, 99, 99, 0.75);
+    -moz-box-shadow: -7px 7px 13px 0px rgba(102, 99, 99, 0.75);
+    background: #303030;
+    color: white;
+    border: 1px solid white;
+}
 .curve{
     transform: skewX(-45deg);
     position: absolute;

@@ -1,3 +1,9 @@
+.lib{
+    transform: rotate(-90deg);
+    position:absolute;
+    right: 0.3cm;
+    bottom: 0.3cm;
+}
 .curve{
     transform: skewX(-45deg);
     position: absolute;
