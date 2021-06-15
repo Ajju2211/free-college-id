@@ -25,10 +25,16 @@ margin-right: auto;
 
 .personid{
 position: absolute;
-/* left: 2%;
-top: 10%; */
-/* transform: scale(1.5); */
+height:70% !important;
+margin-top: 20px;
+width:"auto";
 animation: bigify 2s ease-in forwards;
+}
+@media screen and (max-width:1200px){
+    .personid{
+        height: 54% !important;
+        margin-top: 5%;
+    }
 }
 @keyframes bigify {
     0% {
