@@ -1,4 +1,5 @@
 import React from 'react'
+import Barcode from "react-barcode"
 import styles from './cardoutput.module.css'
 const generateLibId = (rollNumber) => {
     const DEFAULT_ID = "185 H1";

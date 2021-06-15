@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import { FaImage } from "react-icons/fa"
 import { RiImageAddFill, RiImageEditFill } from 'react-icons/ri'
+import UppyImage from "../UppyImage/UppyImage"
 import "react-datepicker/dist/react-datepicker.css";
 import "./datePickerCustom.css"
 const YEAR = new Date().getFullYear();
@@ -23,7 +24,8 @@ export default function Form({ fullName, setFullName,
     setCourse, rollNumber,
     setRollNumber, duration, setDuration,
     period, setPeriod,
-    dob, setDob, sapId, setSapId, bpNo, setBpNo
+    dob, setDob, sapId, setSapId, bpNo, setBpNo,
+    setPassportImg, passportImg
     , ...props }) {
     // const [fullName, setFullName] = useState("");
     // const [fatherName, setFatherName] = useState("");
@@ -35,6 +37,32 @@ export default function Form({ fullName, setFullName,
     // const [dob, setDob] = useState("");
     // const [sapId, setSapId] = useState("")
     // const [bpNo, setBpNo] = useState("");
+    const uploadCb = (result) => {
+        const { successful, failed } = result;
+        console.log(failed);
+        if (failed.length > 0) {
+          // M.toast({ html: `Failed due to:  ${failed[0].error}` });
+        } else {
+          // const url = `https://mindfulautomations.com/${successful[0].response.uploadURL}`;
+          // M.toast({ html: `successfully uploaded at ${url}` });
+          // fillAttachment(successful[0]);
+        //   alert(JSON.stringify(successful[0]));
+        //   alert(successful[0].response.body.url);
+        //   const imgUrl = successful[0].response.body.location;
+        // const reader = new FileReader();
+        // reader.readAsDataURL(successful[0].data);
+        // reader.onloadend = function () {
+        //   var base64data = reader.result;
+        //   console.log(base64data);
+        // };
+        //window.URL.createObjectURL(successful[0].data)
+        window.$('.uppy-Dashboard-isFixed').removeClass('uppy-Dashboard-isFixed');
+        URL.revokeObjectURL(passportImg);
+        const url = URL.createObjectURL(successful[0].data)
+        console.log(successful[0])
+          setPassportImg(url);
+        }
+      };
     console.log(props);
     return (
         <form>
@@ -74,7 +102,10 @@ export default function Form({ fullName, setFullName,
                 <label for="uploadImg" class="form-label">Upload Photo</label>
                 {/* <input type="text" placeholder="Upload Photo" class="form-control" id="uploadImg" aria-describedby="uploadImgHelp" /> */}
                 <div id="uploadImg" className="form-control d-flex justify-content-center" aria-describedby="uploadImgHelp">
-                    <RiImageAddFill style={{ fontSize: "4.5rem", border: "2px dotted #042a04fc", padding: "5px", borderRadius: "8px", background: "#eae1e8" }} />
+                    {
+                        passportImg.length > 0 ? <RiImageEditFill style={{ fontSize: "4.5rem", border: "2px dotted #042a04fc", padding: "5px", borderRadius: "8px", background: "#eae1e8", boxShadow: "0px 3px 17px 2px rgba(123,186,16,0.75)"}} onClick={()=> UppyImage({}, {}, uploadCb)}/>
+                        : <RiImageAddFill style={{ fontSize: "4.5rem", border: "2px dotted #042a04fc", padding: "5px", borderRadius: "8px", background: "#eae1e8" }} onClick={()=> UppyImage({}, {}, uploadCb)}/>
+                    }
                 </div>
                 <div id="uploadImgHelp" class="form-text">Upload passport photo.</div>
             </div>
@@ -121,6 +152,7 @@ const DropDown = ({ setPeriod, course, setCourse, branch, setBranch, options }) 
 
                 </select>
             </span>
+            <div id="drag-drop-area"></div>
         </div>
     )
 }

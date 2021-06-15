@@ -16,6 +16,7 @@ import Previewcard from './Previewcard';
 //     a.click();
 //   });
 // }
+
 export default function FormBox(props) {
   const [fullName, setFullName] = useState("");
   const [fatherName, setFatherName] = useState("");
@@ -27,6 +28,7 @@ export default function FormBox(props) {
   const [dob, setDob] = useState("");
   const [sapId, setSapId] = useState("")
   const [bpNo, setBpNo] = useState("");
+  const [passportImg, setPassportImg] = useState("");
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current
@@ -48,6 +50,7 @@ export default function FormBox(props) {
             dob={dob} setDob={setDob}
             sapId={sapId} setSapId={setSapId}
             bpNo={bpNo} setBpNo={setBpNo}
+            passportImg={passportImg} setPassportImg={setPassportImg}
           />
         </div>
       </div>
@@ -75,6 +78,7 @@ export default function FormBox(props) {
             dob={dob}
             sapId={sapId}
             bpNo={bpNo}
+            passportImg={passportImg}
              ref={componentRef}  />
           </div>
           </div>
@@ -90,6 +94,7 @@ export default function FormBox(props) {
               dob={dob}
               sapId={sapId}
               bpNo={bpNo}
+              passportImg={passportImg}
             />
             {/* <Back scale={true}/> */}
           </div>
@@ -106,6 +111,7 @@ export default function FormBox(props) {
               dob={dob}
               sapId={sapId}
               bpNo={bpNo}
+              passportImg={passportImg}
             scale={true} />
           </div>
           <div className="w-50" style={{ height: "30px", marginBottom: "20px" }}></div>
