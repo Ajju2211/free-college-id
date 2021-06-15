@@ -25,9 +25,9 @@ margin-right: auto;
 
 .personid{
 position: absolute;
-/* left: 2%;
-top: 10%; */
-/* transform: scale(1.5); */
+height:72% !important;
+bottom:0;
+width:"auto";
 animation: bigify 2s ease-in forwards;
 }
 @keyframes bigify {
