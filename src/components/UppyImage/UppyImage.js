@@ -1,8 +1,12 @@
 // import CustomResize from "./plugins/CustomResize.js";
 // import UppyImageCompressor from "./plugins/UppyImageCompressor.js";
+// 5MB
 function UppyImage(cropperOptions, actions, cb) {
   var uppy = window.Uppy.Core({
-    restrictions: { maxNumberOfFiles: 1 },
+    restrictions: { maxNumberOfFiles: 1 ,
+      maxFileSize: 5000000,
+      allowedFileTypes: ['image/*']
+    },
     browserBackButtonClose: true,
     onBeforeFileAdded: (currentFile, files) => {
       console.log(files);
@@ -28,8 +32,8 @@ function UppyImage(cropperOptions, actions, cb) {
         // responsive: true,
         // initialAspectRatio: 1.33,
         // aspectRatio: 1.33,
-        initialAspectRatio: 1.33,
-        aspectRatio: 1.33,
+        initialAspectRatio: 0.766,
+        aspectRatio: 0.7666,
         ...cropperOptions,
       },
       actions: {
@@ -95,6 +99,7 @@ function UppyImage(cropperOptions, actions, cb) {
       "Upload complete! We’ve uploaded these files:",
       result.successful
     );
+    uppy.close();
     cb(result);
   });
 

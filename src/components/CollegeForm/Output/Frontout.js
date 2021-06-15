@@ -1,6 +1,16 @@
 import React from 'react'
 import styles from './cardoutput.module.css'
 import StudentdetailsOutput from './StudentdetailsOutput'
+const loadImage = (src)=>{
+    const DEFAULT_SRC = "/Images/Will.jpg";
+    if(src){
+        if(src.length<1){
+            return DEFAULT_SRC;
+        }
+        return src;
+    }
+    return DEFAULT_SRC;
+}
 export default function Previewcard(props) {
     return (
         <div className="card" id="printCard" style={{height: "5.2cm", width: "8.4cm"}}>
@@ -28,7 +38,7 @@ export default function Previewcard(props) {
                     </div>
                 </div>
                 <div class={styles.idphoto} >
-                    <img class={styles.photopass} src="/Images/Will.jpg"></img>
+                    <img class={styles.photopass} src={loadImage(props.passportImg)}></img>
                     <img class={styles.signature} src="/Images/signPrincipal.jpg"></img>
                     <div style={{ fontWeight: "bold",fontSize:"0.3cm"}}>PRINCIPAL</div>
                 </div>
