@@ -5,3 +5,12 @@
     font-weight: 800;
     margin-left: 5%;
 }
+.logo1{
+    margin-left: 20%;
+}
+@media screen and (max-width:600px)
+{
+    .logo1{
+        margin-left: 10%;
+    }
+}
