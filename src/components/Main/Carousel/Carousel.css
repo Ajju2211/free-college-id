@@ -30,6 +30,12 @@ margin-top: 20px;
 width:"auto";
 animation: bigify 2s ease-in forwards;
 }
+@media screen and (max-width:1200px){
+    .personid{
+        height: 54% !important;
+        margin-top: 5%;
+    }
+}
 @keyframes bigify {
     0% {
         /* transform: scale(1.5); */
