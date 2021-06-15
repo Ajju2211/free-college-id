@@ -16,6 +16,18 @@ const getDate = (date) => {
     }
     return str;
 }
+const formatName = (name)=>{
+    if(name){
+        let str = name.replace(/\s+/g, ' ').trim();
+        if(str.length > 0){
+            return str;
+        }
+        else{
+            return "FullName"
+        }
+    }
+    return "FullName"
+}
 export default function Studentdetails(props) {
         // 
         // fullName={fullName}
@@ -32,7 +44,7 @@ export default function Studentdetails(props) {
     return (
         <div style={{ display: "flex", justifyContent: "flex-start", padding: "5px", marginLeft: "0.2cm", flexDirection: "column", fontFamily: "sans-serif", fontSize: "16px" }}>
             <div>
-                <div style={{ fontWeight: "bold", padding: "0.15cm 0",textTransform:"uppercase" }}>{props.fullName}</div>
+                <div style={{ fontWeight: "bold", padding: "0.15cm 0",textTransform:"uppercase" }}>{formatName(props.fullName)}</div>
             </div>
             <div style={{ display: "flex" }}>
                 <div style={{ width: "3.15cm" }}>Father's Name </div>

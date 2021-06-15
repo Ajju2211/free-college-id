@@ -2,6 +2,16 @@ import React from 'react'
 import styles from './cardoutput.module.css'
 export default function Back(props) {
     const scale = props.scale ? styles.scale : "";
+        // fullName={fullName}
+        // fatherName={fatherName}
+        // branch={branch}
+        // course={course}
+        // rollNumber={rollNumber}
+        // duration={duration}
+        // period={period}
+        // dob={dob}
+        // sapId={sapId}
+        // bpNo={bpNo}
     return (
         <div className={"card "+scale} id="printCard" style={{height: "5.2cm", width: "8.4cm",padding:"0"}}>
             <div class="card-body p-0" style={{ border: "1px black solid", margin: "1px",position:"relative"}}>
@@ -17,7 +27,7 @@ export default function Back(props) {
                  <div style={{position:"relative"}}>
                  <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img>
                  <div style={{position:"absolute",bottom:"0",height:"0.3cm",width:"100%",display:"flex",justifyContent:"center"}}>
-                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>070017887</p>
+                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.sapId || "070017887"}</p>
                  </div>
                  </div>
              </div>
@@ -26,7 +36,7 @@ export default function Back(props) {
                  <div style={{position:"relative"}}>
                  <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img>
                  <div style={{position:"absolute",bottom:"0",height:"0.3cm",width:"100%",display:"flex",justifyContent:"center"}}>
-                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>070017887</p>
+                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.bpNo || "070017887"}</p>
                  </div>
                  </div>
              </div>   
