@@ -1,5 +1,23 @@
 import React from 'react'
 import styles from './cardoutput.module.css'
+const generateLibId = (rollNumber) => {
+    const DEFAULT_ID = "185 H1";
+    if(!rollNumber){
+        return DEFAULT_ID
+    }
+    let str = rollNumber.replace(/\s+/g, ' ').trim();
+    if(str.length > 0){
+        let outputStr = str.substr(0, 2);
+        if(str.length > 4){
+            outputStr+= str.charAt(str.length - 3) + " "+ str.substr(str.length - 2);
+        }
+        return outputStr.toUpperCase()
+    }
+    else{
+        return DEFAULT_ID
+    }
+    
+}
 export default function Back(props) {
     const scale = props.scale ? styles.scale : "";
         // fullName={fullName}
@@ -43,7 +61,7 @@ export default function Back(props) {
              <div class={styles.lib} style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center'}}>
                  <p style={{fontSize:"0.3cm",margin:"0"}}>LIB ID NO</p>
                  <img src="/Images/lib.png" style={{width:"2.1cm",height:"0.7cm"}}></img>
-                 <p style={{fontSize:"0.3cm"}}>185H1</p>
+                 <p style={{fontSize:"0.3cm"}}>{generateLibId(props.rollNumber)}</p>
              </div>
             </div>
         </div>

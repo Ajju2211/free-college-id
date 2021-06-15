@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './cardoutput.module.css'
 import StudentdetailsOutput from './StudentdetailsOutput'
-export default function Previewcard() {
+export default function Previewcard(props) {
     return (
         <div className="card" id="printCard" style={{height: "5.2cm", width: "8.4cm"}}>
             <div class="card-body p-0" style={{ border: "1px black solid", margin: "1px"}}>
@@ -13,7 +13,7 @@ export default function Previewcard() {
                         </div>
                     </div>
                 </div>
-                <StudentdetailsOutput />
+                <StudentdetailsOutput {...props}/>
                 <div className="d-flex p-0 m-0" style={{ background: "rgb(18 28 67)", maxHeight: "1.1cm", alignItems: "center", color: "white",bottom:'0' }}>
                     <div className="m-0" style={{ display: "flex",padding:"2mm 0 2mm 0.8mm", width: "5.4cm", alignItems: "flex-start", height: "1.1cm", flexDirection: "column", justifyContent: "center" }}>
                         <div style={{ fontSize: "0.17cm", fontFamily: "sans-serif", letterSpacing: "0.2mm" }}>Yamnampet, Ghatkesar Mandal, Hyderabad - 501301.</div>

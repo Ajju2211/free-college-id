@@ -64,7 +64,18 @@ export default function FormBox(props) {
           <div className="row justify-content-center" style={{flexDirection:"column", alignItems:"center"}}>
           {/* <Preview/> */}
           <div id="printMe" className="row">
-            <PrintOutput ref={componentRef}  />
+            <PrintOutput 
+            fullName={fullName}
+            fatherName={fatherName}
+            branch={branch}
+            course={course}
+            rollNumber={rollNumber}
+            duration={duration}
+            period={period}
+            dob={dob}
+            sapId={sapId}
+            bpNo={bpNo}
+             ref={componentRef}  />
           </div>
           </div>
           <div className="row p-0 m-0" style={{ width: "14.1cm", height: "7.8cm", position: "relative", alignItems: "center", justifyContent: "center" }}>
