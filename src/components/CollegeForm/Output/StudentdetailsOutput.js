@@ -42,7 +42,7 @@ export default function Studentdetails(props) {
     return (
         <div style={{ display: "flex", justifyContent: "flex-start", padding: "1mm", marginLeft: "0.2cm", flexDirection: "column", fontFamily: "sans-serif", fontSize: "0.27cm" }}>
             <div>
-                <div style={{ fontWeight: "bold", padding: "0.11cm 0" }}>{formatName(props.fullName)}</div>
+                <div style={{ fontWeight: "bold", padding: "0.11cm 0",textTransform:"uppercase" }}>{formatName(props.fullName)}</div>
             </div>
             <div style={{ display: "flex" }}>
                 <div style={{ width: "2cm" }}>Father's Name </div>

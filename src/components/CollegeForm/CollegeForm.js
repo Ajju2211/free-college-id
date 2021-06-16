@@ -4,33 +4,45 @@ import { FaChevronLeft } from 'react-icons/fa'
 import FormBox from './FormBox'
 import { Link , useParams} from 'react-router-dom'
 import collegesData from "../../data/colleges.json"
+import Errorpage from '../Error/Errorpage'
 const NotFound = () => {
     return (
-        <h1 style={{color:"white",textAlign:"center"}}>No Such Page Found</h1>
+        // <h1 style={{color:"white",textAlign:"center", height:"50vw"}}>No Such Page Found</h1>
+        <Errorpage/>
     )
 }
 export default function CollegeForm() {
     const {id} = useParams();
     const [colgData, setColgData] = useState({})
-    const [notFound, setNotFound] = useState(true);
+    const [notFound, setNotFound] = useState(false);
+    const [loading, setLoading] = useState(true);
     
     useEffect(()=>{
+        setLoading(false);
         if(id){
             try {
                 let data = collegesData.data[parseInt(id)];   
-                if(typeof data==="undefined" || !data.available){
+                if(typeof data==="undefined"){
                     setNotFound(true);
                 }
-                console.log(data);
-                setNotFound(false);
-                setColgData(collegesData.data[parseInt(id)]);
+                if(!data.available){
+                    setNotFound(true);
+                }
+                else{
+                    console.log(data);
+                    setNotFound(false);
+                    setColgData(collegesData.data[parseInt(id)]);
+                }
+
             } catch (error) {
                 setNotFound(true);
             }
         }
         
     },[])
-
+if(loading){
+    return <h1>Loading...</h1>
+}
     return (
         <>{
             !notFound ?

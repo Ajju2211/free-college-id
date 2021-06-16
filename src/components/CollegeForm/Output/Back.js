@@ -2,7 +2,7 @@ import React from 'react'
 import Barcode from "react-barcode"
 import styles from './cardoutput.module.css'
 const generateLibId = (rollNumber) => {
-    const DEFAULT_ID = "185 H1";
+    const DEFAULT_ID = "XXXYX";
     if(!rollNumber){
         return DEFAULT_ID
     }
@@ -10,7 +10,7 @@ const generateLibId = (rollNumber) => {
     if(str.length > 0){
         let outputStr = str.substr(0, 2);
         if(str.length > 4){
-            outputStr+= str.charAt(str.length - 3) + " "+ str.substr(str.length - 2);
+            outputStr+= str.charAt(str.length - 3) + str.substr(str.length - 2);
         }
         return outputStr.toUpperCase()
     }
@@ -46,7 +46,7 @@ export default function Back(props) {
                  <div style={{position:"relative"}}>
                  <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img>
                  <div style={{position:"absolute",bottom:"0",height:"0.3cm",width:"100%",display:"flex",justifyContent:"center"}}>
-                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.sapId || "070017887"}</p>
+                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.sapId || "123456789"}</p>
                  </div>
                  </div>
              </div>
@@ -55,7 +55,7 @@ export default function Back(props) {
                  <div style={{position:"relative"}}>
                  <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img>
                  <div style={{position:"absolute",bottom:"0",height:"0.3cm",width:"100%",display:"flex",justifyContent:"center"}}>
-                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.bpNo || "070017887"}</p>
+                 <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.bpNo || "12345678"}</p>
                  </div>
                  </div>
              </div>   
