@@ -26,7 +26,10 @@ export default function CollegesBoard() {
 
     },[searchText]);
     return (
-        <div className="container mt-3 mb-3" id="search">
+        <div className="container mt-3 mb-3">
+            <div style={{height:"10px"}} id="search">
+
+            </div>
             <div className="row">
                 <div className={" " + styles.searchGrp}>
                     <div className={"input-group mb-3 " + styles.searchInputGrp}>
