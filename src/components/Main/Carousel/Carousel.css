@@ -1,9 +1,15 @@
-.heading > h1{
-    font-size: 3em;
+
+.carouseltext{
+    font-size: 2.8em;
     font-weight: bold;
     color: white;
+    align-self: flex-start !important;
     -webkit-text-stroke: 2px black;
     /* font-family: 'Poppins', sans-serif; */
+}
+.Typewriter__cursor{
+    font-size: 2.8em;
+    color: gray;
 }
 .heading > p{
     color: white;
@@ -15,7 +21,7 @@ margin-right: auto;
 }
 
 @media screen and (max-width:750px){
-.heading >h1{
+.carouseltext{
     font-size: 2.6em;
 }
 .heading >p{
