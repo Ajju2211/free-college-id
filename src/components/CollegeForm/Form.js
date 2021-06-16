@@ -65,17 +65,17 @@ export default function Form({ fullName, setFullName,
       };
     console.log(props);
     return (
-        <form>
+        <form class="mb-3">
             {/* FullName */}
             <div class="mb-3">
                 <label for="fullName" class="form-label">FullName</label>
-                <input type="text" placeholder="Full Name" class="form-control" id="fullName" aria-describedby="fullNameHelp" onChange={(e) => setFullName(e.target.value)} value={fullName} />
+                <input type="text" placeholder="Full Name" class="form-control" id="fullName"  maxlength="25" aria-describedby="fullNameHelp" onChange={(e) => setFullName(e.target.value)} value={fullName} />
                 <div id="fullNameHelp" class="form-text">Enter your Full Name as per college records.</div>
             </div>
             {/* Father name */}
             <div class="mb-3">
                 <label for="fatherName" class="form-label">Father's Name</label>
-                <input type="text" placeholder="Father's Name" class="form-control" id="fatherName" aria-describedby="fatherNameHelp" value={fatherName} onChange={(e) => setFatherName(e.target.value)} />
+                <input type="text" placeholder="Father's Name" class="form-control" id="fatherName" maxlength="21" aria-describedby="fatherNameHelp" value={fatherName} onChange={(e) => setFatherName(e.target.value)} />
                 {/* <div id="fatherNameHelp" class="form-text">Enter your Full Name as per college records.</div> */}
             </div>
             {/* Course, Branch */}
@@ -83,7 +83,7 @@ export default function Form({ fullName, setFullName,
             {/* Roll numbr */}
             <div class="mb-3">
                 <label for="rollNumber" class="form-label">Roll Number</label>
-                <input type="text" placeholder="Roll Number" class="form-control" id="rollNumber" onChange={(e) => setRollNumber(e.target.value)} value={rollNumber} />
+                <input type="text" placeholder="Roll Number" class="form-control" id="rollNumber" maxlength="10" onChange={(e) => setRollNumber(e.target.value)} value={rollNumber} />
                 {/* <div id="fullNameHelp" class="form-text">Enter your Full Name as per college records.</div> */}
             </div>
             {/* DOB */}
@@ -111,12 +111,12 @@ export default function Form({ fullName, setFullName,
             </div>
             <div class="mb-3">
                 <label for="sapId" class="form-label">SAP ID</label>
-                <input type="text" value={sapId} onChange={(e) => setSapId(e.target.value)} placeholder="SAP Id" class="form-control" id="sapId" aria-describedby="sapIdHelp" />
+                <input type="text" value={sapId} onChange={(e) => setSapId(e.target.value)} placeholder="SAP Id" maxlength="9" class="form-control" id="sapId" aria-describedby="sapIdHelp" />
                 <div id="sapIdHelp" class="form-text">Enter your SAP ID given by your college.</div>
             </div>
             <div class="mb-3">
                 <label for="bpNo" class="form-label">BP No</label>
-                <input type="text" onChange={(e) => setBpNo(e.target.value)} value={bpNo} placeholder="BP No" class="form-control" id="bpNo" aria-describedby="bpNoHelp" />
+                <input type="text" onChange={(e) => setBpNo(e.target.value)} value={bpNo} placeholder="BP No" maxlength="8" class="form-control" id="bpNo" aria-describedby="bpNoHelp" />
                 <div id="bpNoHelp" class="form-text">Enter your BP No given by your college.</div>
             </div>
             <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>

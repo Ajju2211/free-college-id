@@ -21,7 +21,7 @@ export default function Card(props) {
                             <img src={props.url} className={"" + styles.collegePlateImg} />
                         </div>
                         {ribbon ? <div className={styles.bottomribbon+" bottomRib"} >
-                        <h5>{props.available ?<Link className="stretched-link" style={{textDecoration:"none",color:"white"}} to={`/college/${props.id}`} >Generate</Link>:<span>Coming Soon</span>}</h5></div> : <></>}
+                        <h5>{props.available ?<Link className="stretched-link" style={{textDecoration:"none",color:"white"}} to={`/college/${props.id}`} ><span style={{color:"#2b3aef"}}>Generate</span></Link>:<span>Coming Soon</span>}</h5></div> : <></>}
                     </div>
                 </div>
             </div>
