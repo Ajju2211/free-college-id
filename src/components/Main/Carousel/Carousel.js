@@ -32,12 +32,10 @@ export class Carousel extends Component {
     render() {
         return (
             <div>
-                <div style={{ height: this.props.WinHeight, width: "100%", backgroundColor: "#434343", justifyContent: "center", display: "flex", alignItems: "center" }}>
+                <div style={{ height: this.props.WinHeight, width: "100%", backgroundColor: "#434343", justifyContent: "center", display: "flex", alignItems: "center" ,flexDirection:"column"}}>
              {this.props.winWidth > 1050 ? <img className="personid" src="Images/ph1.png"></img> : <></>}
-
-             <div className="heading" style={{ display: "flex", flexDirection: "column"}}>
-                 <div style={{width:"100%"}}>
-                 <Typewriter
+             {/* <div className="mainhead" style={{display:"flex",flexDirection:'column',alignItems:"flex-start",width:"100%",paddingLeft:"22%"}}>
+             <Typewriter
                      options={{
                          strings: ['Get your college ID card for free'],
                          autoStart: true,
@@ -46,8 +44,10 @@ export class Carousel extends Component {
                          delay:"50",
                     }}
                  />
-                 </div>
-                 {/* <h1 style={{ textAlign: "center" }} >Get your college ID card for free</h1> */}
+             </div>
+          */}
+             <div className="heading" style={{ display: "flex", flexDirection: "column"}}>
+                 <h1 style={{ textAlign: "center" }} >Get your college ID card for free</h1>
                 <p style={{ textAlign: "center" }}>Download within few seconds...!</p>
                 <button className="findbutton"><a href="/#search" style={{ textDecoration: "none", color: "black" }}>Find your college</a></button>
              </div>
