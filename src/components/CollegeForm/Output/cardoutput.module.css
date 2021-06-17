@@ -4,6 +4,18 @@
     animation-fill-mode: forwards;
     top: 80px;
 }
+#bpArea > img {
+    width:3.4cm;
+    height:0.7cm;
+}
+#sapArea > img {
+    width:3.4cm;
+    height:0.7cm;
+}
+.lib > img {
+    width:2.1cm;
+    height:0.7cm;
+}
 .lib{
     transform: rotate(-90deg);
     position:absolute;

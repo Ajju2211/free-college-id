@@ -1,5 +1,6 @@
-import React from 'react'
-import Barcode from "react-barcode"
+import React ,{useEffect, useState} from 'react'
+// import Barcode from './Barcode'
+import Barcode from 'react-barcode'
 import styles from './cardoutput.module.css'
 const generateLibId = (rollNumber) => {
     const DEFAULT_ID = "XXXYX";
@@ -43,8 +44,9 @@ export default function Back(props) {
              </div>
              <div style={{display:"flex",maxHeight:"0.7cm",alignItems:"center",padding:"0.5cm 0"}}>
                  <div style={{fontSize:"0.3cm" ,paddingLeft:"0.5cm",paddingRight:"0.2cm"}}>SAP ID :</div>
-                 <div style={{position:"relative"}}>
-                 <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img>
+                 <div style={{position:"relative"}} id={styles.sapArea}>
+                 {/* <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img> */}
+                 <Barcode renderer='img' displayValue={false} format="CODE128"  value={props.sapId || "123456789"} style={{width:"3.4cm",height:"0.7cm"}} />
                  <div style={{position:"absolute",bottom:"0",height:"0.3cm",width:"100%",display:"flex",justifyContent:"center"}}>
                  <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.sapId || "123456789"}</p>
                  </div>
@@ -52,8 +54,9 @@ export default function Back(props) {
              </div>
              <div style={{display:"flex",maxHeight:"0.7cm",alignItems:"center",paddingTop:"0.4cm"}}>
                  <div style={{fontSize:"0.3cm",paddingLeft:"0.5cm",paddingRight:"0.2cm",left:"0",right:"0"}}>BP NO :</div>
-                 <div style={{position:"relative"}}>
-                 <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img>
+                 <div style={{position:"relative"}} id={styles.bpArea}>
+                 {/* <img style={{width:"3.4cm",height:"0.7cm"}} src="/Images/bp.png"></img> */}
+                 <Barcode renderer='img' displayValue={false} format="CODE128"  value={props.bpNo || "123456789"} style={{width:"3.4cm",height:"0.7cm"}} />
                  <div style={{position:"absolute",bottom:"0",height:"0.3cm",width:"100%",display:"flex",justifyContent:"center"}}>
                  <p style={{background:"white",textAlign:"center",fontSize:"0.22cm",position:"absolute"}}>{props.bpNo || "12345678"}</p>
                  </div>
@@ -61,7 +64,8 @@ export default function Back(props) {
              </div>   
              <div class={styles.lib} style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center'}}>
                  <p style={{fontSize:"0.3cm",margin:"0"}}>LIB ID NO</p>
-                 <img src="/Images/lib.png" style={{width:"2.1cm",height:"0.7cm"}}></img>
+                 {/* <img src="/Images/lib.png" style={{width:"2.1cm",height:"0.7cm"}}></img> */}
+                 <Barcode renderer='img' displayValue={false} format="CODE128"  value={generateLibId(props.rollNumber)} style={{width:"3.4cm",height:"0.7cm"}} />
                  <p style={{fontSize:"0.3cm"}}>{generateLibId(props.rollNumber)}</p>
              </div>
             </div>

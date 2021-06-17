@@ -40,9 +40,9 @@ export default function CollegeForm() {
         }
         
     },[])
-if(loading){
-    return <h1>Loading...</h1>
-}
+// if(loading){
+//     return <h1>Loading...</h1>
+// }
     return (
         <>{
             !notFound ?
