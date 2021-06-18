@@ -16,6 +16,14 @@ const getDate = (date) => {
     }
     return str;
 }
+const getDuration = (latEntry,duration)=>{
+    // alert(latEntry)
+    if(latEntry==="true"){
+        let [startYear, endYear] = duration.split('-');
+        return `${parseInt(startYear) +1}-${endYear}`
+    }
+    return duration;
+}
 const formatName = (name)=>{
     if(name){
         let str = name.replace(/\s+/g, ' ').trim();
@@ -62,7 +70,7 @@ export default function Studentdetails(props) {
             </div>
             <div style={{ display: "flex" }}>
                 <div style={{ width: "2cm" }}>Course Duration</div>
-                <div>: {props.duration}</div>
+                <div>: {getDuration(props.latEntry,props.duration)}</div>
             </div>
         </div>
     )

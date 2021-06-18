@@ -23,6 +23,7 @@ export default function FormBox(props) {
   const [branch, setBranch] = useState(props.data.branches[0].value);
   const [course, setCourse] = useState(props.data.courses[0].value);
   const [rollNumber, setRollNumber] = useState("")
+  const [latEntry, setlatEntry] = useState("false");
   const [duration, setDuration] = useState("");
   const [period, setPeriod] = useState(props.data.courses[0].duration);
   const [dob, setDob] = useState("");
@@ -51,6 +52,7 @@ export default function FormBox(props) {
             sapId={sapId} setSapId={setSapId}
             bpNo={bpNo} setBpNo={setBpNo}
             passportImg={passportImg} setPassportImg={setPassportImg}
+            latEntry={latEntry} setlatEntry={setlatEntry}
           />
         </div>
       </div>
@@ -73,6 +75,7 @@ export default function FormBox(props) {
             branch={branch}
             course={course}
             rollNumber={rollNumber}
+            latEntry={latEntry}
             duration={duration}
             period={period}
             dob={dob}
@@ -89,6 +92,7 @@ export default function FormBox(props) {
               branch={branch}
               course={course}
               rollNumber={rollNumber}
+              latEntry={latEntry}
               duration={duration}
               period={period}
               dob={dob}
@@ -106,6 +110,7 @@ export default function FormBox(props) {
               branch={branch}
               course={course}
               rollNumber={rollNumber}
+              latEntry={latEntry}
               duration={duration}
               period={period}
               dob={dob}

@@ -5,6 +5,7 @@ import { RiImageAddFill, RiImageEditFill } from 'react-icons/ri'
 import UppyImage from "../UppyImage/UppyImage"
 import "react-datepicker/dist/react-datepicker.css";
 import "./datePickerCustom.css"
+import CDATA from "../../data/colleges.json"
 const YEAR = new Date().getFullYear();
 const range = (start, end, step, offset) => {
 
@@ -22,6 +23,7 @@ const range = (start, end, step, offset) => {
 export default function Form({ fullName, setFullName,
     fatherName, setFatherName, branch, course, setBranch,
     setCourse, rollNumber,
+    latEntry, setlatEntry,
     setRollNumber, duration, setDuration,
     period, setPeriod,
     dob, setDob, sapId, setSapId, bpNo, setBpNo,
@@ -88,6 +90,24 @@ export default function Form({ fullName, setFullName,
             </div>
             {/* DOB */}
             <Dob dob={dob} setDob={(date) => setDob(date)} />
+            <div class="mb-3 form-check form-switch">
+                <label for="latEntry" class="form-check-label">Are you a Lateral entry?</label>
+                <input value={latEntry} checked={latEntry==='true' ? "checked":null} onClick={(e)=>{
+                    // if(e.target.checked){
+                    //     setPeriod(o=>o-1)
+                    // }
+                    // else{
+                    //     setPeriod(CDATA.data[0].courses)
+                    // }
+                    setlatEntry(o=>{
+                        // alert(o)
+                        if(o==='true'){
+                            return "false"
+                        }
+                        return "true"}
+                        )}} type="checkbox" placeholder="Roll Number" class="form-check-input" id="latEntry" maxlength="10" onChange={(e) => setRollNumber(e.target.value)} value={rollNumber} />
+                <div id="latEntry" class="form-text">For laterel entries 1st year will be skipped.</div>
+            </div>
             <div className="mb-3">
                 <label for="duration" class="form-label">Duration</label>
                 <select class="form-select" id="duration" value={duration} onChange={(e) => setDuration(e.target.value)}>
@@ -97,6 +117,10 @@ export default function Form({ fullName, setFullName,
                         })
                     }
                 </select>
+                {
+                latEntry==='false' ? <div id="duration" class="form-text">select your batch year range.</div>:
+                <div id="duration" class="form-text">LE's select range based on passed out year.</div>
+                }
             </div>
             <div class="mb-3">
                 <label for="uploadImg" class="form-label">Upload Photo</label>

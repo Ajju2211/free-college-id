@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './cardoutput.module.css'
 import StudentdetailsOutput from './StudentdetailsOutput'
 const loadImage = (src)=>{
-    const DEFAULT_SRC = "/Images/Will.jpg";
+    const DEFAULT_SRC = "/Images/passport.jpg";
     if(src){
         if(src.length<1){
             return DEFAULT_SRC;
