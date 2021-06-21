@@ -30,6 +30,7 @@ export default function FormBox(props) {
   const [sapId, setSapId] = useState("")
   const [bpNo, setBpNo] = useState("");
   const [passportImg, setPassportImg] = useState("");
+  const [printSides,setPrintSides] = useState('both');
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current
@@ -53,6 +54,7 @@ export default function FormBox(props) {
             bpNo={bpNo} setBpNo={setBpNo}
             passportImg={passportImg} setPassportImg={setPassportImg}
             latEntry={latEntry} setlatEntry={setlatEntry}
+            printSides={printSides} setPrintSides={setPrintSides}
           />
         </div>
       </div>
@@ -79,6 +81,7 @@ export default function FormBox(props) {
             duration={duration}
             period={period}
             dob={dob}
+            printSides={printSides}
             sapId={sapId}
             bpNo={bpNo}
             passportImg={passportImg}

@@ -10,12 +10,37 @@ export class Preview extends Component {
              
         }
     }
+    renderCards = ()=>{
+        if(this.props.printSides==='both'){
+            return (
+                <>
+                <Frontout {...this.props}/>
+                <Back {...this.props}/>
+                </>
+            )
+        }
+        if(this.props.printSides==='front'){
+            return(
+                <>
+                <Frontout {...this.props}/>
+                </>
+            )
+        }
+        else{
+            return(
+                <>
+                <Back {...this.props}/>
+                </>
+            )
+        }
+    }
     
     render() {
         return (
             <div style={{ fontFamily: "'PT Sans', sans-serif",display:"none"}} id="printOutPut">
-                <Frontout {...this.props}/>
-                <Back {...this.props}/>
+                {
+                    this.renderCards(this.props)
+                }
             </div>
         )
     }

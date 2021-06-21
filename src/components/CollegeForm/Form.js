@@ -27,7 +27,8 @@ export default function Form({ fullName, setFullName,
     setRollNumber, duration, setDuration,
     period, setPeriod,
     dob, setDob, sapId, setSapId, bpNo, setBpNo,
-    setPassportImg, passportImg
+     setPassportImg, passportImg,
+     printSides , setPrintSides
     , ...props }) {
     // const [fullName, setFullName] = useState("");
     // const [fatherName, setFatherName] = useState("");
@@ -142,6 +143,14 @@ export default function Form({ fullName, setFullName,
                 <label for="bpNo" class="form-label">BP No</label>
                 <input type="text" onChange={(e) => setBpNo(e.target.value)} value={bpNo} placeholder="BP No" maxlength="8" class="form-control" id="bpNo" aria-describedby="bpNoHelp" />
                 <div id="bpNoHelp" class="form-text">Enter your BP No given by your college.</div>
+            </div>
+            <div className="mb-3">
+                <label for="printSide" class="form-label">Print</label>
+                <select class="form-select" id="printSide" value={printSides} onChange={(e) => setPrintSides(e.target.value)}>
+                    <option value="both">Both Sides</option>
+                    <option value="front">Front View</option>
+                    <option value="rear">Rear View</option>
+                </select>
             </div>
             <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
             <button type="submit" onClick={(e)=>{
