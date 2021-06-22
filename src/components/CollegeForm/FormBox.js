@@ -16,13 +16,18 @@ import Previewcard from './Previewcard';
 //     a.click();
 //   });
 // }
-
+const getRollNumber = (email)=>{
+    if(email.length < 1){
+      return ""
+    }
+    return email.split("@")[0];
+}
 export default function FormBox(props) {
-  const [fullName, setFullName] = useState("");
+  const [fullName, setFullName] = useState(JSON.parse(props.user).name || "");
   const [fatherName, setFatherName] = useState("");
   const [branch, setBranch] = useState(props.data.branches[0].value);
   const [course, setCourse] = useState(props.data.courses[0].value);
-  const [rollNumber, setRollNumber] = useState("")
+  const [rollNumber, setRollNumber] = useState(getRollNumber(JSON.parse(props.user).email || ""))
   const [latEntry, setlatEntry] = useState("false");
   const [duration, setDuration] = useState("");
   const [period, setPeriod] = useState(props.data.courses[0].duration);
