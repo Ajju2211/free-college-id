@@ -26,8 +26,13 @@
     color: white;
     font-size: 1.85rem;
 }
+.signInBox{
 
+}
 @media only screen and (max-width: 720px) {
+    .signInBox{
+        width:90% !important;
+    }
     .backBtn {
         font-size: 1.5rem;
     }   

@@ -4,6 +4,7 @@ import { FaChevronLeft } from 'react-icons/fa'
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import FormBox from './FormBox'
 import { Link , useParams} from 'react-router-dom'
+import withSizes from 'react-sizes';
 import collegesData from "../../data/colleges.json"
 import Errorpage from '../Error/Errorpage'
 const clientId = "786217029263-0re29kcq90e8vaauvhp1k6qsc8pgu99d.apps.googleusercontent.com";
@@ -13,7 +14,7 @@ const NotFound = () => {
         <Errorpage/>
     )
 }
-export default function CollegeForm() {
+function CollegeForm(props) {
     const {id} = useParams();
     const [colgData, setColgData] = useState({})
     const [notFound, setNotFound] = useState(false);
@@ -58,7 +59,7 @@ export default function CollegeForm() {
         console.log("Login Failed:", res);
       };
       const onSignoutSuccess = () => {
-        alert("You have been logged out successfully");
+        // alert("You have been logged out successfully");
         setUser(JSON.stringify({}));
         setIsLogged(false);
       };
@@ -67,6 +68,11 @@ export default function CollegeForm() {
 // }
 if(authRequired && !isLogged){
     return (
+        <div className="row" style={{height:props.winHeight, justifyContent:"center",alignContent:"center"}}>
+        <div className={styles.signInBox+" card p-0"} style={{width:"50%"}}>
+        <h2 className="card-header text-center">Sign in</h2>
+        <div className="card-body" style={{display: "flex",flexDirection: "column",alignItems: "center",justifyContent: "center"}}>
+        <p>College email does not open in mobile inbuilt browser (chrome mobile), use either external browser or desktop to signin.</p>
         <GoogleLogin
           clientId={clientId}
           hostedDomain="sreenidhi.edu.in"
@@ -76,6 +82,9 @@ if(authRequired && !isLogged){
           cookiePolicy={"single_host_origin"}
           isSignedIn={true}
         />
+        </div>
+        </div>
+        </div>
     )
 }
     return (
@@ -106,3 +115,8 @@ if(authRequired && !isLogged){
         }</>
       )
 }
+const mapSizesToProps=({height,width})=>({
+    winHeight:height-60,
+    winWidth:width
+    });
+export default withSizes(mapSizesToProps)(CollegeForm)
