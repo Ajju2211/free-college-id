@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Sitemap: https://freeidcard.ml/sitemap.xml
 Disallow:
