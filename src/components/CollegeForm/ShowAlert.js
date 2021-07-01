@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState, useEffect } from "react";
 import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
 import Swal from "sweetalert2";
@@ -29,6 +29,9 @@ const myAlert = (onClose) => {
 const ShowAlert = ({ onClose }) => {
   const { windWidth, windHeight } = useWindowSize();
   myAlert(onClose);
+  useEffect(() => {
+    window.$('svg > a > g:nth-child(4) > text').text(99)
+  })
   return (
     <div>
       <Confetti  width={windWidth} height={windHeight} />
