@@ -5,6 +5,7 @@ import { useReactToPrint } from 'react-to-print';
 import Preview from './Preview';
 import Back from './Output/Back';
 import Previewcard from './Previewcard';
+import ShowAlert from './ShowAlert'
 // const downloadImage = () => {
 //   window.scrollTo(0, 0);
 //   window.html2canvas(window.document.querySelector("#printMe")).then(canvas => {
@@ -36,13 +37,18 @@ export default function FormBox(props) {
   const [bpNo, setBpNo] = useState("");
   const [passportImg, setPassportImg] = useState("");
   const [printSides,setPrintSides] = useState('both');
+  const [showAlert, setShowAlert] = useState(false);
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
-    content: () => componentRef.current
+    content: () => componentRef.current,
+    onAfterPrint: () => setShowAlert(true)
   });
   console.log(props)
   return (
     <div className="row m-0 mt-2 justify-content-center">
+      {
+        showAlert ? <ShowAlert onClose={setShowAlert}/>:<></>
+      }
       <div className="col-md-5 col-12 mt-2">
         <div className="container bg-dark text-white" style={{ borderRadius: "10px" }}>
           <h3 className="text-center text-white">Details</h3>
