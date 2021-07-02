@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
 import Swal from "sweetalert2";
+import useSound from 'use-sound';
+import alertMusic from './alert2.mp3';
 import withReactContent from "sweetalert2-react-content";
 
 const MySwal = withReactContent(Swal);
@@ -28,7 +30,9 @@ const myAlert = (onClose) => {
 
 const ShowAlert = ({ onClose }) => {
   const { windWidth, windHeight } = useWindowSize();
+  const [play] = useSound(alertMusic);
   myAlert(onClose);
+  play();
   return (
     <div>
       <Confetti
