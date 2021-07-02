@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
 import Swal from "sweetalert2";
@@ -31,7 +31,13 @@ const ShowAlert = ({ onClose }) => {
   myAlert(onClose);
   return (
     <div>
-      <Confetti  width={windWidth} height={windHeight} />
+      <Confetti
+        style={{position:"fixed"}}
+        gravity={0.2}
+        initialVelocityY={15}
+        width={windWidth}
+        height={windHeight}
+      />
     </div>
   );
 };

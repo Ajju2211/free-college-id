@@ -56,6 +56,7 @@ function CollegeForm(props) {
         setIsLogged(true);
     }
     const onLoginFailure = (res) => {
+        setIsLogged(false);
         console.log("Login Failed:", res);
       };
       const onSignoutSuccess = () => {
@@ -66,7 +67,7 @@ function CollegeForm(props) {
 // if(loading){
 //     return <h1>Loading...</h1>
 // }
-if(authRequired && !isLogged){
+if(authRequired && isLogged){
     return (
         <div className="row" style={{height:props.winHeight, justifyContent:"center",alignContent:"center"}}>
         <div className={styles.signInBox+" card p-0"} style={{width:"50%"}}>
