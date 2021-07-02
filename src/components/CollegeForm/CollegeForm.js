@@ -56,7 +56,6 @@ function CollegeForm(props) {
         setIsLogged(true);
     }
     const onLoginFailure = (res) => {
-        setIsLogged(false);
         console.log("Login Failed:", res);
       };
       const onSignoutSuccess = () => {
