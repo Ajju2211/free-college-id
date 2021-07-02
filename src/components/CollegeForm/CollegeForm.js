@@ -66,13 +66,13 @@ function CollegeForm(props) {
 // if(loading){
 //     return <h1>Loading...</h1>
 // }
-if(authRequired && isLogged){
+if(authRequired && !isLogged){
     return (
         <div className="row" style={{height:props.winHeight, justifyContent:"center",alignContent:"center"}}>
         <div className={styles.signInBox+" card p-0"} style={{width:"50%"}}>
         <h2 className="card-header text-center">Sign in</h2>
         <div className="card-body" style={{display: "flex",flexDirection: "column",alignItems: "center",justifyContent: "center"}}>
-        <p>College email does not open in few inbuilt browsers of older versions of mobile, use either external browser or desktop to signin is such issues.</p>
+        <p>College email does not open in few inbuilt browsers of older versions of mobile, use either external browser or desktop to signIn in such issues.</p>
         <GoogleLogin
           clientId={clientId}
           hostedDomain="sreenidhi.edu.in"
