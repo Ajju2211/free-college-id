@@ -94,7 +94,9 @@ export default function FormBox(props) {
               window.$("#printOutPut").show();
               handlePrint();
               window.$("#printOutPut").hide();
-              window.gtag("event", "users_printed","total");
+              window.gtag("event", "users_printed",{
+                "count":"printed"
+              });
               // window.gtag("event", "user_printed", {
               //   users: [
               //     JSON.stringify({
