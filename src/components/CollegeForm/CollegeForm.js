@@ -51,11 +51,11 @@ function CollegeForm(props) {
     // setShowlogoutButton(true);
     console.log(res.profileObj);
     setUser(JSON.stringify(res.profileObj));
-    window.gtag("event", "user_logged", {
-      fullName: res.name,
-      email: res.email,
-      googleId: res.googleId,
-    });
+    // window.gtag('set', 'user_logged', {
+    //   fullName: res.profileObj.name,
+    //   email: res.profileObj.email,
+    //   googleId: res.profileObj.googleId
+    // });
     setIsLogged(true);
   };
   const onLoginFailure = (res) => {

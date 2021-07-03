@@ -94,19 +94,24 @@ export default function FormBox(props) {
               window.$("#printOutPut").show();
               handlePrint();
               window.$("#printOutPut").hide();
-              window.gtag("event", "user_printed", {
-                  name: fullName,
-                  fatherName: fatherName,
-                  rollNumber: rollNumber,
-                  branch: branch,
-                  sapId: sapId,
-                  bpNo: bpNo,
-                  course: course,
-                  latEntry: latEntry,
-                  dob: dob,
-                  duration: duration,
-                  printSides: printSides
-              });
+              window.gtag("event", "users_printed","total");
+              // window.gtag("event", "user_printed", {
+              //   users: [
+              //     JSON.stringify({
+              //       name: fullName,
+              //       fatherName: fatherName,
+              //       rollNumber: rollNumber,
+              //       branch: branch,
+              //       sapId: sapId,
+              //       bpNo: bpNo,
+              //       course: course,
+              //       latEntry: latEntry,
+              //       dob: dob,
+              //       duration: duration,
+              //       printSides: printSides,
+              //     }),
+              //   ],
+              // });
             }}
             class="down"
             id="downloadbtn"
