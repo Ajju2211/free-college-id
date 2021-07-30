@@ -6,7 +6,7 @@
 
 # proxy to another service
 [[redirects]]
-  from = "/api/*"
+  from = "/api"
   to = "https://jsonplaceholder.typicode.com"
   status = 200
   force = true
