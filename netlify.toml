@@ -1,7 +1,7 @@
 # proxy to another service
 [[redirects]]
   from = "/api/*"
-  to = "https://jsonplaceholder.typicode.com"
+  to = "https://jsonplaceholder.typicode.com/:splat"
   status = 200
   force = true
 # redirecting to index for spa
