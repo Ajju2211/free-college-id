@@ -1,4 +1,15 @@
+# redirecting to index for spa
 [[redirects]]
   from = "/*"
   to = "/"
   status = 200
+
+# proxy to another service
+[[redirects]]
+  from = "/api/*"
+  to = "https://jsonplaceholder.typicode.com"
+  status = 200
+  force = true
+#  [redirects.headers]
+#   X-From = "Netlify"
+#   X-Api-Key = "some-api-key-string"
