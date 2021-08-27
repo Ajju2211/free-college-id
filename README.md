@@ -3,6 +3,6 @@ This is a React application help students to create college ID card within secon
 - npm i 
 # Demo
 
-![FreeIdCard Demo](public/demo.gif)
+![FreeIdCard Demo](public/Demo.gif)
 
-![FreeIdCard Demo Card](demo.jpg)
+![FreeIdCard Demo Card](demoCard.jpg)
