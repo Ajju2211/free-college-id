@@ -26,12 +26,24 @@
 import React, { Component } from 'react'
 import withSizes from 'react-sizes'
 import Typewriter from 'typewriter-effect'
+import ShowDemo from '../../showDemo'
 import './Carousel.css'
 
 export class Carousel extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             showDemo: false
+        }
+    }
+    
     render() {
         return (
             <div>
+            {
+                this.state.showDemo ? <ShowDemo onClose={()=>{this.setState({showDemo:false})}}/>:<></>
+            }
                 <div style={{ height: this.props.WinHeight, width: "100%", backgroundColor: "#434343", justifyContent: "center", display: "flex", alignItems: "center" ,flexDirection:"column"}}>
              {this.props.winWidth > 1050 ? <img className="personid" src="Images/ph1.png"></img> : <></>}
              {/* <div className="mainhead" style={{display:"flex",flexDirection:'column',alignItems:"flex-start",width:"100%",paddingLeft:"22%"}}>
@@ -50,6 +62,7 @@ export class Carousel extends Component {
                  <h1 style={{ textAlign: "center" }} >Get your college ID card for free</h1>
                 <p style={{ textAlign: "center" }}>Download within few seconds...!</p>
                 <button className="findbutton"><a href="/#search" style={{ textDecoration: "none", color: "black" }}>Find your college</a></button>
+                <button className="findbutton mt-3 btn btn-secondary btn-outline-danger" onClick={()=>{this.setState({showDemo:!this.state.showDemo})}} style={{ color: "black" }}>Demo</button>
              </div>
          </div>
                 
