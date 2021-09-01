@@ -61,8 +61,10 @@ export class Carousel extends Component {
              <div className="heading" style={{ display: "flex", flexDirection: "column"}}>
                  <h1 style={{ textAlign: "center" }} >Get your college ID card for free</h1>
                 <p style={{ textAlign: "center" }}>Download within few seconds...!</p>
-                <button className="findbutton"><a href="/#search" style={{ textDecoration: "none", color: "black" }}>Find your college</a></button>
-                <button className="findbutton mt-3 btn btn-secondary btn-outline-danger" onClick={()=>{this.setState({showDemo:!this.state.showDemo})}} style={{ color: "black" }}>Demo</button>
+                <div className="d-flex mr-auto ml-auto justify-content-center">
+                <button className="findbutton" style={{margin:"0px 10px 0px 0px"}}><a href="/#search" style={{ textDecoration: "none", color: "black" }}>Find your college</a></button>
+                <button className="findbutton m-0  btn btn-secondary btn-outline-danger" onClick={()=>{this.setState({showDemo:!this.state.showDemo})}} style={{ color: "black" }}>Demo</button>
+                </div>
              </div>
          </div>
                 

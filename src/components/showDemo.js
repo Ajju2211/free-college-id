@@ -6,14 +6,13 @@ import withReactContent from "sweetalert2-react-content";
 
 const MySwal = withReactContent(Swal);
 const htmlBody = (
-  <p>
-    <h3>Give it a try! 😄</h3>
-      <img className="img-fluid" src="/Demo.gif" />
+  <p className="">
+      <img style={{maxHeight:"60vh",width:"auto",maxWidth:"100%"}} src="/Demo.gif" />
   </p>
 );
 const myAlert = (onClose) => {
   MySwal.fire({
-    title: <p>FreeIdCard Demo!</p>,
+    title: <p>FreeIdCard Demo! Give it a try! 😄</p>,
     footer: "Powered by MARS",
     html: htmlBody,
     showCloseButton: true,
