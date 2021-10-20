@@ -72,7 +72,7 @@ export default function Form({ fullName, setFullName,
             {/* FullName */}
             <div class="mb-3">
                 <label for="fullName" class="form-label">FullName</label>
-                <input type="text" disabled placeholder="Full Name" class="form-control" id="fullName"  maxlength="25" aria-describedby="fullNameHelp" onChange={(e) => setFullName(e.target.value)} value={fullName} />
+                <input type="text" placeholder="Full Name" class="form-control" id="fullName"  maxlength="25" aria-describedby="fullNameHelp" onChange={(e) => setFullName(e.target.value)} value={fullName} />
                 <div id="fullNameHelp" class="form-text">Enter your Full Name as per college records.</div>
             </div>
             {/* Father name */}
