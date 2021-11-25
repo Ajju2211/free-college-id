@@ -3,7 +3,7 @@ import "./footer.css"
 import { VscGithub } from 'react-icons/vsc'
 function Footer() {
     return (
-        <div>
+        <div id="footer">
             <div style={{ background: "rgb(23 22 22)", position: "relative", width: "100%", bottom: "0" }}>
                 <div class="love" style={{ textAlign: "center", padding: "10px 0", color: "black", color: "gray" }}>Made with ❤️ by <span style={{ color: "white", fontWeight: '600' }}>M</span>ohammad <span style={{ color: "white", fontWeight: "600" }}>A</span>zharuddin , <span style={{ color: "white", fontWeight: "600" }}>R</span>ama <span style={{ color: "white", fontWeight: "600" }}>S</span>rikar</div>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>

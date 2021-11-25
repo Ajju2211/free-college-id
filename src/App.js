@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import "./App.css"
 import Errorpage from "./components/Error/Errorpage";
+import PrintOutput from "./components/CollegeForm/PrintOutput";
 export default function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path="/college/:id" component={CollegeForm} />
+        <Route path="/snist/direct" component={PrintOutput} />
         <Route component={Errorpage} />
       </Switch>
       <Footer/>
