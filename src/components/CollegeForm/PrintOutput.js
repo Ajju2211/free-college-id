@@ -41,9 +41,9 @@ export class Preview extends Component {
                 document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type").style.height = "100%";
                 document.querySelector("#printCard > div > div:nth-of-type(3)").style.maxHeight = "none";
                 document.querySelector("#printCard > div > div:nth-of-type(3)").style.minHeight = "1.1cm";
+                document.getElementById("printCard").style.minHeight = "5.2cm";
+                document.getElementById("printCard").style.height = "100%";
             },100);
-            document.getElementById("printCard").style.minHeight = "5.2cm";
-            document.getElementById("printCard").style.height = "100%";
             //*[@id="printCard"]/div/div[3]/div[1]
         }
         const nav = document.querySelector("nav");
