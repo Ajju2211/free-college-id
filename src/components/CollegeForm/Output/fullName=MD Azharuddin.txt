@@ -1,0 +1,13 @@
+fullName=MD Azharuddin
+&fatherName=MD Ismail
+&branch=CSE
+&course=B.Tech
+&rollNumber=18311A05E8
+&latEntry=false
+&duration=2018-22
+&period=4
+&dob=2021-11-24T14:48:15.456Z
+&sapId=1212
+&bpNo=121212
+&printSides=both
+passportImg

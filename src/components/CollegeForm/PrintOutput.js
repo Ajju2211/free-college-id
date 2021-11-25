@@ -11,6 +11,12 @@ export class Preview extends Component {
         }
     }
     componentDidMount() {
+        if(!this.props.location){
+            return;
+        }
+        if(this.props.location && !this.props.location.search){
+            return;
+        }
         const search = this.props.location.search;
         const newProps = {};
         newProps.fullName = new URLSearchParams(search).get("fullName");
