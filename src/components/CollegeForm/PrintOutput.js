@@ -39,7 +39,7 @@ export class Preview extends Component {
         if (footer) {
             footer.style.display = "none";
         }
-        // document.body.style.background = "white";
+        document.body.style.background = "white";
     }
     renderCards = (props) => {
         if (props.printSides === 'both') {
