@@ -2,10 +2,12 @@ import React, { useState, useRef } from "react";
 import Form from "./Form";
 import PrintOutput from "./PrintOutput";
 import { useReactToPrint } from "react-to-print";
+import { saveAs } from 'file-saver';
 import Preview from "./Preview";
 import Back from "./Output/Back";
 import Previewcard from "./Previewcard";
 import ShowAlert from "./ShowAlert";
+import ShowDownloading from "./ShowDownloading";
 // const downloadImage = () => {
 //   window.scrollTo(0, 0);
 //   window.html2canvas(window.document.querySelector("#printMe")).then(canvas => {
@@ -39,8 +41,18 @@ export default function FormBox(props) {
   const [bpNo, setBpNo] = useState("");
   const [passportImg, setPassportImg] = useState("");
   const [printSides, setPrintSides] = useState("both");
+  const [printType, setPrintType] = useState("pdf");
   const [showAlert, setShowAlert] = useState(false);
+  const [showDownloading, setShowDownloading] = useState(false);
   const componentRef = useRef();
+  const handlePrintImage = () => {
+    // &passportImg=
+    const url = `https://cloud-print.herokuapp.com/?fullName=${fullName}&fatherName=${fatherName}&branch=${branch}&course=${course}&rollNumber=${rollNumber}&latEntry=${latEntry}&duration=${duration}&period=${period}&dob=${dob}&sapId=${sapId}&printSides=both`;
+    document.querySelector("#downloadbtn").style.disabled = true;
+    saveAs(url, rollNumber + "_freeidcard");
+    showAlert(true);
+    document.querySelector("#downloadbtn").style.disabled = false;
+  }
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
     onAfterPrint: () => setShowAlert(true),
@@ -49,6 +61,7 @@ export default function FormBox(props) {
   return (
     <div className="row m-0 mt-2 justify-content-center">
       {showAlert ? <ShowAlert onClose={setShowAlert} /> : <></>}
+      {showDownloading ? <ShowDownloading onClose={setShowDownloading} /> : <></>}
       <div className="col-md-5 col-12 mt-2">
         <div
           className="container bg-dark text-white"
@@ -83,6 +96,8 @@ export default function FormBox(props) {
             setlatEntry={setlatEntry}
             printSides={printSides}
             setPrintSides={setPrintSides}
+            printType={printType}
+            setPrintType={setPrintType}
           />
         </div>
       </div>
@@ -91,11 +106,16 @@ export default function FormBox(props) {
           <h3 className="text-center text-white">Preview</h3>
           <button
             onClick={() => {
-              window.$("#printOutPut").show();
-              handlePrint();
-              window.$("#printOutPut").hide();
-              window.gtag("event", "users_printed",{
-                "count":"printed"
+              if (printType == "pdf") {
+                window.$("#printOutPut").show();
+                handlePrint();
+                window.$("#printOutPut").hide();
+              }
+              else {
+                handlePrintImage();
+              }
+              window.gtag("event", "users_printed", {
+                "count": "printed"
               });
               // window.gtag("event", "user_printed", {
               //   users: [

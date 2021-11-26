@@ -28,7 +28,8 @@ export default function Form({ fullName, setFullName,
     period, setPeriod,
     dob, setDob, sapId, setSapId, bpNo, setBpNo,
      setPassportImg, passportImg,
-     printSides , setPrintSides
+     printSides , setPrintSides,
+     printType , setPrintType
     , ...props }) {
     // const [fullName, setFullName] = useState("");
     // const [fatherName, setFatherName] = useState("");
@@ -150,6 +151,13 @@ export default function Form({ fullName, setFullName,
                     <option value="both">Both Sides</option>
                     <option value="front">Front View</option>
                     <option value="rear">Rear View</option>
+                </select>
+            </div>
+            <div className="mb-3">
+                <label for="printSide" class="form-label">Download as</label>
+                <select class="form-select" id="printType" value={printType} onChange={(e) => setPrintType(e.target.value)}>
+                    <option value="pdf">PDF</option>
+                    <option value="image">Image</option>
                 </select>
             </div>
             <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
