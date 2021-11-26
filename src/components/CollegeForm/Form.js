@@ -62,8 +62,9 @@ export default function Form({ fullName, setFullName,
         //window.URL.createObjectURL(successful[0].data)
         window.$('.uppy-Dashboard-isFixed').removeClass('uppy-Dashboard-isFixed');
         URL.revokeObjectURL(passportImg);
-        const url = URL.createObjectURL(successful[0].data)
-        console.log(successful[0])
+        const url = URL.createObjectURL(successful[0].data);
+        window.user_image_blob = successful[0].data; 
+        console.log(successful[0]);
           setPassportImg(url);
         }
       };

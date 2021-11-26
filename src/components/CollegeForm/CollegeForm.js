@@ -69,7 +69,7 @@ function CollegeForm(props) {
   // if(loading){
   //     return <h1>Loading...</h1>
   // }
-  if (authRequired && !isLogged) {
+  if (authRequired && isLogged) {
     return (
       <div
         className="row"
@@ -116,7 +116,7 @@ function CollegeForm(props) {
     <>
       {!notFound ? (
         <div className="container-fluid m-0">
-          {isLogged ? (
+          {!isLogged ? (
             <GoogleLogout
               clientId={clientId}
               buttonText="Sign Out"

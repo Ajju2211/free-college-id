@@ -56,20 +56,33 @@ export default function FormBox(props) {
     // &passportImg=
     let url = `https://cloud-print.herokuapp.com/?fullName=${fullName}&fatherName=${fatherName}&branch=${branch}&course=${course}&rollNumber=${rollNumber}&latEntry=${latEntry}&duration=${duration}&period=${period}&dob=${dob}&sapId=${sapId}&printSides=both`;
     if(passportImg.length>1){
-      blobToBase64(passportImg).then(data=>{
+      // blobToBase64(window.user_image_blob).then(data=>{
+      //   const form = new FormData();
+      //   form.append("file", data);
+      //   const api = `http://localhost:5500/images/${rollNumber || "random"}`;
+      //   fetch(api, {
+      //     method: "POST",
+      //     body: form
+      //   }).then(r=>r.json()).then(res=>{
+      //     document.querySelector("#downloadbtn").style.disabled = true;
+      //     url+=`&passportImg=${res.url}`;
+      //     saveAs(url, rollNumber + "_freeidcard");
+      //     showAlert(true);
+      //     document.querySelector("#downloadbtn").style.disabled = false;
+      //   });
+      // })
+        const form = new FormData();
+        form.append("file", window.user_image_blob);
         const api = `https://cloud-print.herokuapp.com/images/${rollNumber || "random"}`;
-        fetch({
-          method: "POST",url:api,body:{
-            data: data
-          }
+        fetch(api, {
+          method: "POST",
+          body: form
         }).then(r=>r.json()).then(res=>{
           document.querySelector("#downloadbtn").style.disabled = true;
           url+=`&passportImg=${res.url}`;
           saveAs(url, rollNumber + "_freeidcard");
-          showAlert(true);
-          document.querySelector("#downloadbtn").style.disabled = false;
-        })
-      })
+          setShowAlert(true);
+        });
     }
     else{
       document.querySelector("#downloadbtn").style.disabled = true;
