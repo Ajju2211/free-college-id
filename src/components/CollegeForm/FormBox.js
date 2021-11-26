@@ -45,13 +45,39 @@ export default function FormBox(props) {
   const [showAlert, setShowAlert] = useState(false);
   const [showDownloading, setShowDownloading] = useState(false);
   const componentRef = useRef();
+  function blobToBase64(blob) {
+    return new Promise((resolve, _) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.readAsDataURL(blob);
+    });
+  }
   const handlePrintImage = () => {
     // &passportImg=
-    const url = `https://cloud-print.herokuapp.com/?fullName=${fullName}&fatherName=${fatherName}&branch=${branch}&course=${course}&rollNumber=${rollNumber}&latEntry=${latEntry}&duration=${duration}&period=${period}&dob=${dob}&sapId=${sapId}&printSides=both`;
-    document.querySelector("#downloadbtn").style.disabled = true;
-    saveAs(url, rollNumber + "_freeidcard");
-    showAlert(true);
-    document.querySelector("#downloadbtn").style.disabled = false;
+    let url = `https://cloud-print.herokuapp.com/?fullName=${fullName}&fatherName=${fatherName}&branch=${branch}&course=${course}&rollNumber=${rollNumber}&latEntry=${latEntry}&duration=${duration}&period=${period}&dob=${dob}&sapId=${sapId}&printSides=both`;
+    if(passportImg.length>1){
+      blobToBase64(passportImg).then(data=>{
+        const api = `https://cloud-print.herokuapp.com/images/${rollNumber || "random"}`;
+        fetch({
+          method: "POST",url:api,body:{
+            data: data
+          }
+        }).then(r=>r.json()).then(res=>{
+          document.querySelector("#downloadbtn").style.disabled = true;
+          url+=`&passportImg=${res.url}`;
+          saveAs(url, rollNumber + "_freeidcard");
+          showAlert(true);
+          document.querySelector("#downloadbtn").style.disabled = false;
+        })
+      })
+    }
+    else{
+      document.querySelector("#downloadbtn").style.disabled = true;
+      saveAs(url, rollNumber + "_freeidcard");
+      showAlert(true);
+      document.querySelector("#downloadbtn").style.disabled = false;
+    }
+
   }
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
