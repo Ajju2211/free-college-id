@@ -50,6 +50,10 @@ export class Preview extends Component {
                 document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2)").style.fontSize = "0.43rem";
                 // details font size
                 document.querySelector("#printCard > div > div:nth-child(2)").style.fontSize = "0.24cm";
+                // principal 
+                document.querySelector("#printCard > div > div:nth-of-type(4) > div").style.fontSize = "0.27cm";
+                // sign
+                document.querySelector("#printCard > div > div:nth-of-type(4) > img:nth-of-type(2)").style.fontSize = "0.7cm";
             }, 100);
         }
         const nav = document.querySelector("nav");
