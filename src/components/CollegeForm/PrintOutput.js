@@ -43,9 +43,13 @@ export class Preview extends Component {
                 document.querySelector("#printCard > div > div:nth-of-type(3)").style.minHeight = "1.1cm";
                 document.getElementById("printCard").style.minHeight = "5.2cm";
                 document.getElementById("printCard").style.height = "100%";
-                document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type > div:first-of-type").style.fontSize = "0.4rem";
-                document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2)").style.fontSize = "0.45rem";
-
+                // document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type > div:first-of-type").style.fontSize = "0.4rem";
+                // document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2)").style.fontSize = "0.45rem";
+                // address font size
+                document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type > div:first-of-type").style.fontSize = "0.38rem";
+                document.querySelector("#printCard > div > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2)").style.fontSize = "0.43rem";
+                // details font size
+                document.querySelector("#printCard > div > div:nth-child(2)").style.fontSize = "0.24cm";
             }, 100);
         }
         const nav = document.querySelector("nav");
