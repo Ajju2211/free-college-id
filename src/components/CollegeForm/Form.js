@@ -154,13 +154,13 @@ export default function Form({ fullName, setFullName,
                     <option value="rear">Rear View</option>
                 </select>
             </div>
-            {/* <div className="mb-3">
+            <div className="mb-3">
                 <label for="printSide" class="form-label">Download as</label>
                 <select class="form-select" id="printType" value={printType} onChange={(e) => setPrintType(e.target.value)}>
                     <option value="pdf">PDF</option>
                     <option value="image">Image</option>
                 </select>
-            </div> */}
+            </div>
             <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
             <button type="submit" onClick={(e)=>{
                 e.preventDefault();
