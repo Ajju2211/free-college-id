@@ -54,6 +54,13 @@ export class Preview extends Component {
                 document.querySelector("#printCard > div > div:nth-of-type(4) > div").style.fontSize = "0.27cm";
                 // sign
                 document.querySelector("#printCard > div > div:nth-of-type(4) > img:nth-of-type(2)").style.fontSize = "0.7cm";
+                // footer snist logo1
+                document.querySelector("#printCard > div > div:nth-of-type(3) > div:nth-of-type(2) > img:first-of-type").style.height = "0.6cm";
+                document.querySelector("#printCard > div > div:nth-of-type(3) > div:nth-of-type(2) > img:first-of-type").style.width = "1.6cm";
+                document.querySelector("#printCard > div > div:nth-of-type(3) > div:nth-of-type(2) > img:first-of-type").style.marginRight = "0.5mm";
+                
+                
+                
             }, 100);
         }
         const nav = document.querySelector("nav");
