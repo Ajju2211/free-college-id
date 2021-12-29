@@ -56,7 +56,12 @@ function CollegeForm(props) {
     //   email: res.profileObj.email,
     //   googleId: res.profileObj.googleId
     // });
-    setIsLogged(true);
+    fetch("https://cloud-print.herokuapp.com/images/random")
+    .then((res)=>{
+      console.log("health okay")
+      setIsLogged(true)
+    }).catch(()=>console.log("Health not okay"))
+    
   };
   const onLoginFailure = (res) => {
     console.log("Login Failed:", res);
