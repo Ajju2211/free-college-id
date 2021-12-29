@@ -39,7 +39,7 @@ export default function FormBox(props) {
   const [dob, setDob] = useState("");
   const [sapId, setSapId] = useState("");
   const [bpNo, setBpNo] = useState("");
-  const [passportImg, setPassportImg] = useState("");
+  const [passportImg, setPassportImg] = useState(`https://cloud-print.herokuapp.com/images/snist/${rollNumber}`);
   const [printSides, setPrintSides] = useState("both");
   const [printType, setPrintType] = useState("pdf");
   const [showAlert, setShowAlert] = useState(false);
