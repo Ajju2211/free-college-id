@@ -6,6 +6,7 @@ import FormBox from "./FormBox";
 import { Link, useParams } from "react-router-dom";
 import withSizes from "react-sizes";
 import collegesData from "../../data/colleges.json";
+import './styles.css'
 import Errorpage from "../Error/Errorpage";
 const clientId =
   "786217029263-0re29kcq90e8vaauvhp1k6qsc8pgu99d.apps.googleusercontent.com";
@@ -90,7 +91,7 @@ function CollegeForm(props) {
         >
           <h2 className="card-header text-center">Sign in</h2>
           <div
-            className="card-body"
+            className="card-body loginCardBody"
             style={{
               display: "flex",
               flexDirection: "column",
