@@ -39,7 +39,8 @@ export default function FormBox(props) {
   const [dob, setDob] = useState("");
   const [sapId, setSapId] = useState("");
   const [bpNo, setBpNo] = useState("");
-  const [passportImg, setPassportImg] = useState(`https://cloud-print.herokuapp.com/images/snist/${rollNumber}`);
+  // const [passportImg, setPassportImg] = useState(`https://cloud-print.herokuapp.com/images/snist/${rollNumber}`);
+  const [passportImg, setPassportImg] = useState(`//images.weserv.nl/?url=103.15.62.28/upload/${rollNumber}.gif&w=300&h=300`);
   const [printSides, setPrintSides] = useState("both");
   const [printType, setPrintType] = useState("pdf");
   const [showAlert, setShowAlert] = useState(false);
@@ -55,7 +56,7 @@ export default function FormBox(props) {
   const handlePrintImage = () => {
     // &passportImg=
     let url = `https://cloud-print.herokuapp.com/?fullName=${fullName}&fatherName=${fatherName}&branch=${branch}&course=${course}&rollNumber=${rollNumber}&latEntry=${latEntry}&duration=${duration}&period=${period}&dob=${dob}&sapId=${sapId}&printSides=both`;
-    if(passportImg.length>1){
+    if (passportImg.length > 1) {
       // blobToBase64(window.user_image_blob).then(data=>{
       //   const form = new FormData();
       //   form.append("file", data);
@@ -71,20 +72,20 @@ export default function FormBox(props) {
       //     document.querySelector("#downloadbtn").style.disabled = false;
       //   });
       // })
-        const form = new FormData();
-        form.append("file", window.user_image_blob);
-        const api = `https://cloud-print.herokuapp.com/images/${rollNumber || "random"}`;
-        fetch(api, {
-          method: "POST",
-          body: form
-        }).then(r=>r.json()).then(res=>{
-          document.querySelector("#downloadbtn").style.disabled = true;
-          url+=`&passportImg=${res.url}`;
-          saveAs(url, rollNumber + "_freeidcard");
-          setShowAlert(true);
-        });
+      const form = new FormData();
+      form.append("file", window.user_image_blob);
+      const api = `https://cloud-print.herokuapp.com/images/${rollNumber || "random"}`;
+      fetch(api, {
+        method: "POST",
+        body: form
+      }).then(r => r.json()).then(res => {
+        document.querySelector("#downloadbtn").style.disabled = true;
+        url += `&passportImg=${res.url}`;
+        saveAs(url, rollNumber + "_freeidcard");
+        setShowAlert(true);
+      });
     }
-    else{
+    else {
       document.querySelector("#downloadbtn").style.disabled = true;
       saveAs(url, rollNumber + "_freeidcard");
       showAlert(true);
